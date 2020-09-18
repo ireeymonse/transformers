@@ -6,6 +6,13 @@
 
 TODO:
 
-#### Assumptions
+### Development
+
+To enable linting and formatting in your workspace, use
+```
+git config core.hooksPath githooks
+```
+
+### Assumptions
 
 TODO:

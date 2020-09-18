@@ -1,0 +1,4 @@
+#!/bin/sh
+Pods/SwiftFormat/CommandLineTool/swiftformat .
+Pods/SwiftLint/swiftlint autocorrect --quiet
+git add .

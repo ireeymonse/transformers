@@ -1,0 +1,5 @@
+# file options
+--exclude Pods
+
+# format options
+--specifierorder public,override

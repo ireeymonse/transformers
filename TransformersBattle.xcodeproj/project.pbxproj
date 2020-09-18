@@ -14,6 +14,7 @@
 		0B0237E0251465E10094C275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0237DE251465E10094C275 /* LaunchScreen.storyboard */; };
 		0B0237EB251465E20094C275 /* TransformersBattleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0237EA251465E20094C275 /* TransformersBattleTests.swift */; };
 		0B0237F6251465E20094C275 /* TransformersBattleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0237F5251465E20094C275 /* TransformersBattleUITests.swift */; };
+		82593A588555865FF5E38D94 /* Pods_TransformersBattle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D03898E9DE487AF8671BF2 /* Pods_TransformersBattle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		0B0237F1251465E20094C275 /* TransformersBattleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformersBattleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0237F5251465E20094C275 /* TransformersBattleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersBattleUITests.swift; sourceTree = "<group>"; };
 		0B0237F7251465E20094C275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		556B4AC9534A6A47EB1A3852 /* Pods-TransformersBattle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattle.release.xcconfig"; path = "Target Support Files/Pods-TransformersBattle/Pods-TransformersBattle.release.xcconfig"; sourceTree = "<group>"; };
+		D1D03898E9DE487AF8671BF2 /* Pods_TransformersBattle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransformersBattle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCFD286126059EE6BDEC2B95 /* Pods-TransformersBattle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattle.debug.xcconfig"; path = "Target Support Files/Pods-TransformersBattle/Pods-TransformersBattle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82593A588555865FF5E38D94 /* Pods_TransformersBattle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,8 @@
 				0B0237E9251465E20094C275 /* TransformersBattleTests */,
 				0B0237F4251465E20094C275 /* TransformersBattleUITests */,
 				0B0237D1251465DC0094C275 /* Products */,
+				36BF3DDDDB098B97904633C8 /* Pods */,
+				B6A34C14562F5B47BDAA53F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +132,24 @@
 			path = TransformersBattleUITests;
 			sourceTree = "<group>";
 		};
+		36BF3DDDDB098B97904633C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCFD286126059EE6BDEC2B95 /* Pods-TransformersBattle.debug.xcconfig */,
+				556B4AC9534A6A47EB1A3852 /* Pods-TransformersBattle.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B6A34C14562F5B47BDAA53F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1D03898E9DE487AF8671BF2 /* Pods_TransformersBattle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +157,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B0237FA251465E20094C275 /* Build configuration list for PBXNativeTarget "TransformersBattle" */;
 			buildPhases = (
+				E4581338F2B7BC7AC5F3C619 /* [CP] Check Pods Manifest.lock */,
 				0B0237CC251465DC0094C275 /* Sources */,
 				0B0237CD251465DC0094C275 /* Frameworks */,
 				0B0237CE251465DC0094C275 /* Resources */,
@@ -249,6 +275,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E4581338F2B7BC7AC5F3C619 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TransformersBattle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0B0237CC251465DC0094C275 /* Sources */ = {
@@ -429,6 +480,7 @@
 		};
 		0B0237FB251465E20094C275 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCFD286126059EE6BDEC2B95 /* Pods-TransformersBattle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -447,6 +499,7 @@
 		};
 		0B0237FC251465E20094C275 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 556B4AC9534A6A47EB1A3852 /* Pods-TransformersBattle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
