@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,13 +12,18 @@
 		0B0237DB251465DD0094C275 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0237D9251465DD0094C275 /* Main.storyboard */; };
 		0B0237DD251465E10094C275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0237DC251465E10094C275 /* Assets.xcassets */; };
 		0B0237E0251465E10094C275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0237DE251465E10094C275 /* LaunchScreen.storyboard */; };
-		0B0237EB251465E20094C275 /* TransformersBattleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0237EA251465E20094C275 /* TransformersBattleTests.swift */; };
 		0B0237F6251465E20094C275 /* TransformersBattleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0237F5251465E20094C275 /* TransformersBattleUITests.swift */; };
+		0B3EFCCC2516BEC000ED622D /* TransformerCreationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81937C2516BAC800982E18 /* TransformerCreationTests.swift */; };
+		0B3EFD042516C1B100ED622D /* TransformerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5093342516913600C5B9D3 /* TransformerViewModel.swift */; };
+		0B3EFD092516C1BB00ED622D /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50932B2516900600C5B9D3 /* Transformer.swift */; };
+		0B3EFD1A2516C5B200ED622D /* TransformersBattleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3EFD192516C5B200ED622D /* TransformersBattleTests.swift */; };
 		0B50932C2516900600C5B9D3 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50932B2516900600C5B9D3 /* Transformer.swift */; };
 		0B5093352516913600C5B9D3 /* TransformerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5093342516913600C5B9D3 /* TransformerViewModel.swift */; };
 		0B72730A25166891003B0E42 /* Edition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B72730925166891003B0E42 /* Edition.storyboard */; };
 		0B72730F2516698F003B0E42 /* EditTransformerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */; };
+		44A141F7590F8F462E3D9629 /* Pods_TransformersBattleLogicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310D03516E4F418CA298D06B /* Pods_TransformersBattleLogicTests.framework */; };
 		82593A588555865FF5E38D94 /* Pods_TransformersBattle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D03898E9DE487AF8671BF2 /* Pods_TransformersBattle.framework */; };
+		A5E6EEA2250DD39D48DC6443 /* Pods_TransformersBattleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B638A1548B8BAE8515F0E /* Pods_TransformersBattleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,13 @@
 			remoteGlobalIDString = 0B0237CF251465DC0094C275;
 			remoteInfo = TransformersBattle;
 		};
+		0B3EFCBF2516BEAB00ED622D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B0237C8251465DC0094C275 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B0237CF251465DC0094C275;
+			remoteInfo = TransformersBattle;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -47,17 +59,26 @@
 		0B0237DF251465E10094C275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B0237E1251465E10094C275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B0237E6251465E20094C275 /* TransformersBattleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformersBattleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B0237EA251465E20094C275 /* TransformersBattleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersBattleTests.swift; sourceTree = "<group>"; };
 		0B0237EC251465E20094C275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B0237F1251465E20094C275 /* TransformersBattleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformersBattleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0237F5251465E20094C275 /* TransformersBattleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersBattleUITests.swift; sourceTree = "<group>"; };
 		0B0237F7251465E20094C275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B3EFCBA2516BEAB00ED622D /* TransformersBattleLogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformersBattleLogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B3EFCBE2516BEAB00ED622D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B3EFD192516C5B200ED622D /* TransformersBattleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersBattleTests.swift; sourceTree = "<group>"; };
 		0B50932B2516900600C5B9D3 /* Transformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
 		0B5093342516913600C5B9D3 /* TransformerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerViewModel.swift; sourceTree = "<group>"; };
 		0B72730925166891003B0E42 /* Edition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Edition.storyboard; sourceTree = "<group>"; };
 		0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransformerViewController.swift; sourceTree = "<group>"; };
+		0B81937C2516BAC800982E18 /* TransformerCreationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerCreationTests.swift; sourceTree = "<group>"; };
+		310D03516E4F418CA298D06B /* Pods_TransformersBattleLogicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransformersBattleLogicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A4CBB64F49852CA5714F4E2 /* Pods-TransformersBattleLogicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattleLogicTests.release.xcconfig"; path = "Target Support Files/Pods-TransformersBattleLogicTests/Pods-TransformersBattleLogicTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C3B638A1548B8BAE8515F0E /* Pods_TransformersBattleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransformersBattleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		556B4AC9534A6A47EB1A3852 /* Pods-TransformersBattle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattle.release.xcconfig"; path = "Target Support Files/Pods-TransformersBattle/Pods-TransformersBattle.release.xcconfig"; sourceTree = "<group>"; };
+		9BEFED50F32F52EF2800D6EF /* Pods-TransformersBattleLogicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattleLogicTests.debug.xcconfig"; path = "Target Support Files/Pods-TransformersBattleLogicTests/Pods-TransformersBattleLogicTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3E96CF9BCD5107BC8134A89 /* Pods-TransformersBattleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattleTests.release.xcconfig"; path = "Target Support Files/Pods-TransformersBattleTests/Pods-TransformersBattleTests.release.xcconfig"; sourceTree = "<group>"; };
 		D1D03898E9DE487AF8671BF2 /* Pods_TransformersBattle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransformersBattle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFB47340E745A11318D02AAA /* Pods-TransformersBattleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattleTests.debug.xcconfig"; path = "Target Support Files/Pods-TransformersBattleTests/Pods-TransformersBattleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FCFD286126059EE6BDEC2B95 /* Pods-TransformersBattle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattle.debug.xcconfig"; path = "Target Support Files/Pods-TransformersBattle/Pods-TransformersBattle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5E6EEA2250DD39D48DC6443 /* Pods_TransformersBattleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +103,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B3EFCB72516BEAB00ED622D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44A141F7590F8F462E3D9629 /* Pods_TransformersBattleLogicTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +122,7 @@
 			children = (
 				0B0237D2251465DC0094C275 /* TransformersBattle */,
 				0B0237E9251465E20094C275 /* TransformersBattleTests */,
+				0B3EFCBB2516BEAB00ED622D /* TransformersBattleLogicTests */,
 				0B0237F4251465E20094C275 /* TransformersBattleUITests */,
 				0B0237D1251465DC0094C275 /* Products */,
 				36BF3DDDDB098B97904633C8 /* Pods */,
@@ -105,6 +136,7 @@
 				0B0237D0251465DC0094C275 /* TransformersBattle.app */,
 				0B0237E6251465E20094C275 /* TransformersBattleTests.xctest */,
 				0B0237F1251465E20094C275 /* TransformersBattleUITests.xctest */,
+				0B3EFCBA2516BEAB00ED622D /* TransformersBattleLogicTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,7 +160,7 @@
 		0B0237E9251465E20094C275 /* TransformersBattleTests */ = {
 			isa = PBXGroup;
 			children = (
-				0B0237EA251465E20094C275 /* TransformersBattleTests.swift */,
+				0B3EFD192516C5B200ED622D /* TransformersBattleTests.swift */,
 				0B0237EC251465E20094C275 /* Info.plist */,
 			);
 			path = TransformersBattleTests;
@@ -141,6 +173,15 @@
 				0B0237F7251465E20094C275 /* Info.plist */,
 			);
 			path = TransformersBattleUITests;
+			sourceTree = "<group>";
+		};
+		0B3EFCBB2516BEAB00ED622D /* TransformersBattleLogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				0B81937C2516BAC800982E18 /* TransformerCreationTests.swift */,
+				0B3EFCBE2516BEAB00ED622D /* Info.plist */,
+			);
+			path = TransformersBattleLogicTests;
 			sourceTree = "<group>";
 		};
 		0B50932A25168FF500C5B9D3 /* model */ = {
@@ -173,6 +214,10 @@
 			children = (
 				FCFD286126059EE6BDEC2B95 /* Pods-TransformersBattle.debug.xcconfig */,
 				556B4AC9534A6A47EB1A3852 /* Pods-TransformersBattle.release.xcconfig */,
+				EFB47340E745A11318D02AAA /* Pods-TransformersBattleTests.debug.xcconfig */,
+				B3E96CF9BCD5107BC8134A89 /* Pods-TransformersBattleTests.release.xcconfig */,
+				9BEFED50F32F52EF2800D6EF /* Pods-TransformersBattleLogicTests.debug.xcconfig */,
+				3A4CBB64F49852CA5714F4E2 /* Pods-TransformersBattleLogicTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -181,6 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				D1D03898E9DE487AF8671BF2 /* Pods_TransformersBattle.framework */,
+				3C3B638A1548B8BAE8515F0E /* Pods_TransformersBattleTests.framework */,
+				310D03516E4F418CA298D06B /* Pods_TransformersBattleLogicTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -210,9 +257,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B0237FD251465E20094C275 /* Build configuration list for PBXNativeTarget "TransformersBattleTests" */;
 			buildPhases = (
+				A9B376009544846E13B91B15 /* [CP] Check Pods Manifest.lock */,
 				0B0237E2251465E20094C275 /* Sources */,
 				0B0237E3251465E20094C275 /* Frameworks */,
 				0B0237E4251465E20094C275 /* Resources */,
+				B4A7454B9D3168D17536FB4F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,6 +291,26 @@
 			productReference = 0B0237F1251465E20094C275 /* TransformersBattleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0B3EFCB92516BEAB00ED622D /* TransformersBattleLogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B3EFCC12516BEAB00ED622D /* Build configuration list for PBXNativeTarget "TransformersBattleLogicTests" */;
+			buildPhases = (
+				DE3AFAFF1976B2E6DA7D4949 /* [CP] Check Pods Manifest.lock */,
+				0B3EFCB62516BEAB00ED622D /* Sources */,
+				0B3EFCB72516BEAB00ED622D /* Frameworks */,
+				0B3EFCB82516BEAB00ED622D /* Resources */,
+				CD4455C37F4955D1CC12E4DF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B3EFCC02516BEAB00ED622D /* PBXTargetDependency */,
+			);
+			name = TransformersBattleLogicTests;
+			productName = TransformersBattleLogicTests;
+			productReference = 0B3EFCBA2516BEAB00ED622D /* TransformersBattleLogicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -256,11 +325,15 @@
 					};
 					0B0237E5251465E20094C275 = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 						TestTargetID = 0B0237CF251465DC0094C275;
 					};
 					0B0237F0251465E20094C275 = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 0B0237CF251465DC0094C275;
+					};
+					0B3EFCB92516BEAB00ED622D = {
+						CreatedOnToolsVersion = 12.0;
 					};
 				};
 			};
@@ -279,6 +352,7 @@
 			targets = (
 				0B0237CF251465DC0094C275 /* TransformersBattle */,
 				0B0237E5251465E20094C275 /* TransformersBattleTests */,
+				0B3EFCB92516BEAB00ED622D /* TransformersBattleLogicTests */,
 				0B0237F0251465E20094C275 /* TransformersBattleUITests */,
 			);
 		};
@@ -310,9 +384,94 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0B3EFCB82516BEAB00ED622D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A9B376009544846E13B91B15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TransformersBattleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4A7454B9D3168D17536FB4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransformersBattleTests/Pods-TransformersBattleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransformersBattleTests/Pods-TransformersBattleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TransformersBattleTests/Pods-TransformersBattleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD4455C37F4955D1CC12E4DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransformersBattleLogicTests/Pods-TransformersBattleLogicTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransformersBattleLogicTests/Pods-TransformersBattleLogicTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TransformersBattleLogicTests/Pods-TransformersBattleLogicTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE3AFAFF1976B2E6DA7D4949 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TransformersBattleLogicTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E4581338F2B7BC7AC5F3C619 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,7 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B0237EB251465E20094C275 /* TransformersBattleTests.swift in Sources */,
+				0B3EFD1A2516C5B200ED622D /* TransformersBattleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +522,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B0237F6251465E20094C275 /* TransformersBattleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B3EFCB62516BEAB00ED622D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B3EFD042516C1B100ED622D /* TransformerViewModel.swift in Sources */,
+				0B3EFD092516C1BB00ED622D /* Transformer.swift in Sources */,
+				0B3EFCCC2516BEC000ED622D /* TransformerCreationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +547,11 @@
 			isa = PBXTargetDependency;
 			target = 0B0237CF251465DC0094C275 /* TransformersBattle */;
 			targetProxy = 0B0237F2251465E20094C275 /* PBXContainerItemProxy */;
+		};
+		0B3EFCC02516BEAB00ED622D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B0237CF251465DC0094C275 /* TransformersBattle */;
+			targetProxy = 0B3EFCBF2516BEAB00ED622D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -557,9 +731,11 @@
 		};
 		0B0237FE251465E20094C275 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFB47340E745A11318D02AAA /* Pods-TransformersBattleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TransformersBattleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -570,6 +746,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = coding.exercise.TransformersBattleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransformersBattle.app/TransformersBattle";
@@ -578,9 +755,11 @@
 		};
 		0B0237FF251465E20094C275 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3E96CF9BCD5107BC8134A89 /* Pods-TransformersBattleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TransformersBattleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -610,6 +789,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = coding.exercise.TransformersBattleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TransformersBattle;
@@ -629,9 +809,48 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = coding.exercise.TransformersBattleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TransformersBattle;
+			};
+			name = Release;
+		};
+		0B3EFCC22516BEAB00ED622D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BEFED50F32F52EF2800D6EF /* Pods-TransformersBattleLogicTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TransformersBattleLogicTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coding.exercise.TransformersBattleLogicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0B3EFCC32516BEAB00ED622D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A4CBB64F49852CA5714F4E2 /* Pods-TransformersBattleLogicTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TransformersBattleLogicTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coding.exercise.TransformersBattleLogicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -670,6 +889,15 @@
 			buildConfigurations = (
 				0B023801251465E20094C275 /* Debug */,
 				0B023802251465E20094C275 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B3EFCC12516BEAB00ED622D /* Build configuration list for PBXNativeTarget "TransformersBattleLogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B3EFCC22516BEAB00ED622D /* Debug */,
+				0B3EFCC32516BEAB00ED622D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
