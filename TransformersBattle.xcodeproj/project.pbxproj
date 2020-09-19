@@ -14,6 +14,8 @@
 		0B0237E0251465E10094C275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0237DE251465E10094C275 /* LaunchScreen.storyboard */; };
 		0B0237EB251465E20094C275 /* TransformersBattleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0237EA251465E20094C275 /* TransformersBattleTests.swift */; };
 		0B0237F6251465E20094C275 /* TransformersBattleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0237F5251465E20094C275 /* TransformersBattleUITests.swift */; };
+		0B72730A25166891003B0E42 /* Edition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B72730925166891003B0E42 /* Edition.storyboard */; };
+		0B72730F2516698F003B0E42 /* EditTransformerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */; };
 		82593A588555865FF5E38D94 /* Pods_TransformersBattle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D03898E9DE487AF8671BF2 /* Pods_TransformersBattle.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		0B0237F1251465E20094C275 /* TransformersBattleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformersBattleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0237F5251465E20094C275 /* TransformersBattleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersBattleUITests.swift; sourceTree = "<group>"; };
 		0B0237F7251465E20094C275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B72730925166891003B0E42 /* Edition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Edition.storyboard; sourceTree = "<group>"; };
+		0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransformerViewController.swift; sourceTree = "<group>"; };
 		556B4AC9534A6A47EB1A3852 /* Pods-TransformersBattle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattle.release.xcconfig"; path = "Target Support Files/Pods-TransformersBattle/Pods-TransformersBattle.release.xcconfig"; sourceTree = "<group>"; };
 		D1D03898E9DE487AF8671BF2 /* Pods_TransformersBattle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransformersBattle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFD286126059EE6BDEC2B95 /* Pods-TransformersBattle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattle.debug.xcconfig"; path = "Target Support Files/Pods-TransformersBattle/Pods-TransformersBattle.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				0B0237D3251465DC0094C275 /* AppDelegate.swift */,
 				0B0237D7251465DC0094C275 /* ViewController.swift */,
 				0B0237D9251465DD0094C275 /* Main.storyboard */,
+				0B7273082516685A003B0E42 /* edition */,
 				0B0237DC251465E10094C275 /* Assets.xcassets */,
 				0B0237DE251465E10094C275 /* LaunchScreen.storyboard */,
 				0B0237E1251465E10094C275 /* Info.plist */,
@@ -132,13 +137,21 @@
 			path = TransformersBattleUITests;
 			sourceTree = "<group>";
 		};
+		0B7273082516685A003B0E42 /* edition */ = {
+			isa = PBXGroup;
+			children = (
+				0B72730925166891003B0E42 /* Edition.storyboard */,
+				0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */,
+			);
+			path = edition;
+			sourceTree = "<group>";
+		};
 		36BF3DDDDB098B97904633C8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				FCFD286126059EE6BDEC2B95 /* Pods-TransformersBattle.debug.xcconfig */,
 				556B4AC9534A6A47EB1A3852 /* Pods-TransformersBattle.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -255,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B0237E0251465E10094C275 /* LaunchScreen.storyboard in Resources */,
+				0B72730A25166891003B0E42 /* Edition.storyboard in Resources */,
 				0B0237DD251465E10094C275 /* Assets.xcassets in Resources */,
 				0B0237DB251465DD0094C275 /* Main.storyboard in Resources */,
 			);
@@ -306,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B72730F2516698F003B0E42 /* EditTransformerViewController.swift in Sources */,
 				0B0237D8251465DC0094C275 /* ViewController.swift in Sources */,
 				0B0237D4251465DC0094C275 /* AppDelegate.swift in Sources */,
 			);

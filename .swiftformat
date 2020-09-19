@@ -2,4 +2,5 @@
 --exclude Pods
 
 # format options
+--indent 3
 --specifierorder public,override
