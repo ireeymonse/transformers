@@ -19,6 +19,8 @@
 		0B3EFD1A2516C5B200ED622D /* TransformersBattleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3EFD192516C5B200ED622D /* TransformersBattleTests.swift */; };
 		0B50932C2516900600C5B9D3 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50932B2516900600C5B9D3 /* Transformer.swift */; };
 		0B5093352516913600C5B9D3 /* TransformerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5093342516913600C5B9D3 /* TransformerViewModel.swift */; };
+		0B6AF3562516DA12001A9A5E /* SpecViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AF3552516DA12001A9A5E /* SpecViewModel.swift */; };
+		0B6AF35B2516DEB8001A9A5E /* SpecViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AF3552516DA12001A9A5E /* SpecViewModel.swift */; };
 		0B72730A25166891003B0E42 /* Edition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B72730925166891003B0E42 /* Edition.storyboard */; };
 		0B72730F2516698F003B0E42 /* EditTransformerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */; };
 		44A141F7590F8F462E3D9629 /* Pods_TransformersBattleLogicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310D03516E4F418CA298D06B /* Pods_TransformersBattleLogicTests.framework */; };
@@ -68,6 +70,7 @@
 		0B3EFD192516C5B200ED622D /* TransformersBattleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersBattleTests.swift; sourceTree = "<group>"; };
 		0B50932B2516900600C5B9D3 /* Transformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
 		0B5093342516913600C5B9D3 /* TransformerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerViewModel.swift; sourceTree = "<group>"; };
+		0B6AF3552516DA12001A9A5E /* SpecViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecViewModel.swift; sourceTree = "<group>"; };
 		0B72730925166891003B0E42 /* Edition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Edition.storyboard; sourceTree = "<group>"; };
 		0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransformerViewController.swift; sourceTree = "<group>"; };
 		0B81937C2516BAC800982E18 /* TransformerCreationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerCreationTests.swift; sourceTree = "<group>"; };
@@ -196,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				0B5093342516913600C5B9D3 /* TransformerViewModel.swift */,
+				0B6AF3552516DA12001A9A5E /* SpecViewModel.swift */,
 			);
 			path = "view model";
 			sourceTree = "<group>";
@@ -504,6 +508,7 @@
 				0B5093352516913600C5B9D3 /* TransformerViewModel.swift in Sources */,
 				0B72730F2516698F003B0E42 /* EditTransformerViewController.swift in Sources */,
 				0B0237D8251465DC0094C275 /* ViewController.swift in Sources */,
+				0B6AF3562516DA12001A9A5E /* SpecViewModel.swift in Sources */,
 				0B0237D4251465DC0094C275 /* AppDelegate.swift in Sources */,
 				0B50932C2516900600C5B9D3 /* Transformer.swift in Sources */,
 			);
@@ -530,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B3EFD042516C1B100ED622D /* TransformerViewModel.swift in Sources */,
+				0B6AF35B2516DEB8001A9A5E /* SpecViewModel.swift in Sources */,
 				0B3EFD092516C1BB00ED622D /* Transformer.swift in Sources */,
 				0B3EFCCC2516BEC000ED622D /* TransformerCreationTests.swift in Sources */,
 			);

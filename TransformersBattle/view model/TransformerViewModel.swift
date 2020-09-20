@@ -8,26 +8,63 @@
 import Foundation
 
 class TransformerViewModel {
-   var transformer: Transformer
+   var team: Transformer.Team
+   var name: String {
+      didSet { name = name.trimmingCharacters(in: .whitespacesAndNewlines) }
+   }
+
+   var specs: [TransformerSpec: SpecViewModel]
 
    /// Instance for a new transformer, initialized with default values
    init() {
-      transformer = Transformer(
-         team: .autobot, name: "",
-         strength: 0, intelligence: 0, speed: 0, endurance: 0,
-         rank: 0, courage: 0, firepower: 0, skill: 0
-      )
+      team = .autobot
+      name = ""
+      specs = TransformerSpec.allCases.reduce(into: [:]) { acc, spec in
+         acc[spec] = SpecViewModel(spec: spec, value: 0)
+      }
    }
 
    /// Instance for an existing transformer
    init(_ transformer: Transformer) {
-      self.transformer = transformer
+      team = transformer.team
+      name = transformer.name
+      specs = TransformerSpec.allCases.reduce(into: [:]) { acc, spec in
+         let value: Int
+         switch spec {
+         case .strength: value = transformer.strength
+         case .intelligence: value = transformer.intelligence
+         case .speed: value = transformer.speed
+         case .endurance: value = transformer.endurance
+         case .rank: value = transformer.rank
+         case .courage: value = transformer.courage
+         case .firepower: value = transformer.firepower
+         case .skill: value = transformer.skill
+         }
+         acc[spec] = SpecViewModel(spec: spec, value: value)
+      }
    }
 
    var teamName: String {
-      switch transformer.team {
+      switch team {
       case .autobot: return "Autobot"
       case .decepticon: return "Decepticon"
       }
+   }
+
+   subscript(spec: TransformerSpec) -> Float {
+      get {
+         specs[spec]?.value ?? 0
+      }
+      set {
+         specs[spec]?.value = newValue
+      }
+   }
+
+   var specsList: [SpecViewModel] {
+      TransformerSpec.allCases.compactMap { specs[$0] }
+   }
+
+   var isValid: Bool {
+      !name.isEmpty && specs.allSatisfy { _, spec in spec.isValid }
    }
 }
