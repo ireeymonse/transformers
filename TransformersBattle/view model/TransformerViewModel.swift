@@ -10,7 +10,7 @@ import Foundation
 class TransformerViewModel {
    var team: Transformer.Team
    var name: String {
-      didSet { name = name.trimmingCharacters(in: .whitespacesAndNewlines) }
+      didSet { name = name.trimmed }
    }
 
    var specs: [TransformerSpec: SpecViewModel]

@@ -21,8 +21,16 @@
 		0B5093352516913600C5B9D3 /* TransformerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5093342516913600C5B9D3 /* TransformerViewModel.swift */; };
 		0B6AF3562516DA12001A9A5E /* SpecViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AF3552516DA12001A9A5E /* SpecViewModel.swift */; };
 		0B6AF35B2516DEB8001A9A5E /* SpecViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AF3552516DA12001A9A5E /* SpecViewModel.swift */; };
+		0B6AF361251700D9001A9A5E /* WarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AF360251700D9001A9A5E /* WarViewModel.swift */; };
+		0B6AF367251705D2001A9A5E /* WarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AF366251705D2001A9A5E /* WarTests.swift */; };
+		0B6AF36C25170631001A9A5E /* WarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AF360251700D9001A9A5E /* WarViewModel.swift */; };
 		0B72730A25166891003B0E42 /* Edition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B72730925166891003B0E42 /* Edition.storyboard */; };
 		0B72730F2516698F003B0E42 /* EditTransformerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */; };
+		0BC9BB7B2517081A00C4A529 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9BB7A2517081A00C4A529 /* String+.swift */; };
+		0BC9BB802517085500C4A529 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9BB7A2517081A00C4A529 /* String+.swift */; };
+		0BC9BB8625178E9300C4A529 /* BattleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9BB8525178E9300C4A529 /* BattleViewModel.swift */; };
+		0BC9BB8C25178FA200C4A529 /* BattleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9BB8B25178FA200C4A529 /* BattleTests.swift */; };
+		0BC9BB9125178FCB00C4A529 /* BattleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9BB8525178E9300C4A529 /* BattleViewModel.swift */; };
 		44A141F7590F8F462E3D9629 /* Pods_TransformersBattleLogicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310D03516E4F418CA298D06B /* Pods_TransformersBattleLogicTests.framework */; };
 		82593A588555865FF5E38D94 /* Pods_TransformersBattle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D03898E9DE487AF8671BF2 /* Pods_TransformersBattle.framework */; };
 		A5E6EEA2250DD39D48DC6443 /* Pods_TransformersBattleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B638A1548B8BAE8515F0E /* Pods_TransformersBattleTests.framework */; };
@@ -71,9 +79,14 @@
 		0B50932B2516900600C5B9D3 /* Transformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
 		0B5093342516913600C5B9D3 /* TransformerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerViewModel.swift; sourceTree = "<group>"; };
 		0B6AF3552516DA12001A9A5E /* SpecViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecViewModel.swift; sourceTree = "<group>"; };
+		0B6AF360251700D9001A9A5E /* WarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarViewModel.swift; sourceTree = "<group>"; };
+		0B6AF366251705D2001A9A5E /* WarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarTests.swift; sourceTree = "<group>"; };
 		0B72730925166891003B0E42 /* Edition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Edition.storyboard; sourceTree = "<group>"; };
 		0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransformerViewController.swift; sourceTree = "<group>"; };
 		0B81937C2516BAC800982E18 /* TransformerCreationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerCreationTests.swift; sourceTree = "<group>"; };
+		0BC9BB7A2517081A00C4A529 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		0BC9BB8525178E9300C4A529 /* BattleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleViewModel.swift; sourceTree = "<group>"; };
+		0BC9BB8B25178FA200C4A529 /* BattleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleTests.swift; sourceTree = "<group>"; };
 		310D03516E4F418CA298D06B /* Pods_TransformersBattleLogicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransformersBattleLogicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4CBB64F49852CA5714F4E2 /* Pods-TransformersBattleLogicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattleLogicTests.release.xcconfig"; path = "Target Support Files/Pods-TransformersBattleLogicTests/Pods-TransformersBattleLogicTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C3B638A1548B8BAE8515F0E /* Pods_TransformersBattleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransformersBattleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +168,7 @@
 				0B7273082516685A003B0E42 /* edition */,
 				0B0237DC251465E10094C275 /* Assets.xcassets */,
 				0B0237DE251465E10094C275 /* LaunchScreen.storyboard */,
+				0BC9BB792517080900C4A529 /* utils */,
 				0B0237E1251465E10094C275 /* Info.plist */,
 			);
 			path = TransformersBattle;
@@ -182,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				0B81937C2516BAC800982E18 /* TransformerCreationTests.swift */,
+				0BC9BB8B25178FA200C4A529 /* BattleTests.swift */,
+				0B6AF366251705D2001A9A5E /* WarTests.swift */,
 				0B3EFCBE2516BEAB00ED622D /* Info.plist */,
 			);
 			path = TransformersBattleLogicTests;
@@ -200,6 +216,8 @@
 			children = (
 				0B5093342516913600C5B9D3 /* TransformerViewModel.swift */,
 				0B6AF3552516DA12001A9A5E /* SpecViewModel.swift */,
+				0B6AF360251700D9001A9A5E /* WarViewModel.swift */,
+				0BC9BB8525178E9300C4A529 /* BattleViewModel.swift */,
 			);
 			path = "view model";
 			sourceTree = "<group>";
@@ -211,6 +229,14 @@
 				0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */,
 			);
 			path = edition;
+			sourceTree = "<group>";
+		};
+		0BC9BB792517080900C4A529 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				0BC9BB7A2517081A00C4A529 /* String+.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		36BF3DDDDB098B97904633C8 /* Pods */ = {
@@ -506,6 +532,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B5093352516913600C5B9D3 /* TransformerViewModel.swift in Sources */,
+				0B6AF361251700D9001A9A5E /* WarViewModel.swift in Sources */,
+				0BC9BB8625178E9300C4A529 /* BattleViewModel.swift in Sources */,
+				0BC9BB7B2517081A00C4A529 /* String+.swift in Sources */,
 				0B72730F2516698F003B0E42 /* EditTransformerViewController.swift in Sources */,
 				0B0237D8251465DC0094C275 /* ViewController.swift in Sources */,
 				0B6AF3562516DA12001A9A5E /* SpecViewModel.swift in Sources */,
@@ -534,10 +563,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B6AF367251705D2001A9A5E /* WarTests.swift in Sources */,
 				0B3EFD042516C1B100ED622D /* TransformerViewModel.swift in Sources */,
+				0BC9BB9125178FCB00C4A529 /* BattleViewModel.swift in Sources */,
 				0B6AF35B2516DEB8001A9A5E /* SpecViewModel.swift in Sources */,
+				0BC9BB8C25178FA200C4A529 /* BattleTests.swift in Sources */,
 				0B3EFD092516C1BB00ED622D /* Transformer.swift in Sources */,
 				0B3EFCCC2516BEC000ED622D /* TransformerCreationTests.swift in Sources */,
+				0BC9BB802517085500C4A529 /* String+.swift in Sources */,
+				0B6AF36C25170631001A9A5E /* WarViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
