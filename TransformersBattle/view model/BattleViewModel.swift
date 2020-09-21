@@ -12,10 +12,14 @@ enum BattleOutcome {
                 eliminated: TransformerViewModel)
    /// Both eliminated
    case tie(TransformerViewModel, TransformerViewModel)
+   /// Everyone eliminated
+   case mayhem
 
    init(between a: Transformer, and b: Transformer) {
-      if let outcome = mayhem(a, b) {
-         self = outcome
+      // both are Supreme Warriors?
+      if let _ = supreme(a, b), let _ = supreme(b, a) {
+         print("Mayhem!")
+         self = .mayhem
       } else if let outcome = supreme(a, b) ?? supreme(b, a) {
          self = outcome
       } else if let outcome = hero(a, b) ?? hero(b, a) {
@@ -50,6 +54,7 @@ enum BattleOutcome {
       switch self {
       case let .victory(_, eliminated): return [eliminated]
       case let .tie(a, b): return [a, b]
+      case .mayhem: return []
       }
    }
 }
@@ -69,15 +74,6 @@ private func _wins(_ a: Transformer, _ b: Transformer,
 
 /// Win the battle automatically
 let supremeWarriors = ["Optimus Prime", "Predaking"]
-
-/// Both are Supreme Warriors
-func mayhem(_ a: Transformer, _ b: Transformer) -> BattleOutcome? {
-   if let A = supreme(a, b)?.victor, let B = supreme(b, a)?.victor {
-      print("Mayhem!")
-      return .tie(A, B)
-   }
-   return nil
-}
 
 /// `a` is a Supreme Warrior
 func supreme(_ a: Transformer, _ b: Transformer) -> BattleOutcome? {

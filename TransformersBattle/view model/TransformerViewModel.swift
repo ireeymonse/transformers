@@ -44,12 +44,7 @@ class TransformerViewModel {
       }
    }
 
-   var teamName: String {
-      switch team {
-      case .autobot: return "Autobot"
-      case .decepticon: return "Decepticon"
-      }
-   }
+   var teamName: String { team.name }
 
    subscript(spec: TransformerSpec) -> Float {
       get {
@@ -66,5 +61,21 @@ class TransformerViewModel {
 
    var isValid: Bool {
       !name.isEmpty && specs.allSatisfy { _, spec in spec.isValid }
+   }
+}
+
+extension Transformer.Team {
+   var name: String {
+      switch self {
+      case .autobot: return "Autobot"
+      case .decepticon: return "Decepticon"
+      }
+   }
+
+   var rival: Self {
+      switch self {
+      case .autobot: return .decepticon
+      case .decepticon: return .autobot
+      }
    }
 }

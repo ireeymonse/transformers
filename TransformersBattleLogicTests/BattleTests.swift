@@ -128,15 +128,10 @@ class BattleTests: QuickSpec {
                   and: "Predaking, D, 10,10,10,10,10,10,10,10"
                )
             }
-            it("should be a tie") {
-               guard case .tie = sut else {
+            it("should be a mayhem") {
+               guard case .mayhem = sut else {
                   return fail("expected .tie, got \(sut!)")
                }
-            }
-            it("should eliminate both") {
-               expect(sut.eliminated.count) == 2
-               expect(sut.eliminated.first?.name) == "Optimus Prime"
-               expect(sut.eliminated.last?.name) == "Predaking"
             }
          }
 
@@ -147,17 +142,10 @@ class BattleTests: QuickSpec {
                   and: "Predaking, D, 10,10,10,10,10,10,10,10"
                )
             }
-            it("should be a tie") {
-               guard case .tie = sut else {
+            it("should be a mayhem") {
+               guard case .mayhem = sut else {
                   return fail("expected .tie, got \(sut!)")
                }
-            }
-            it("should eliminate both") {
-               expect(sut.eliminated.count) == 2
-               expect(sut.eliminated.first?.name) == "Predaking"
-               expect(sut.eliminated.first?.teamName) == "Autobot"
-               expect(sut.eliminated.last?.name) == "Predaking"
-               expect(sut.eliminated.last?.teamName) == "Decepticon"
             }
          }
       }
