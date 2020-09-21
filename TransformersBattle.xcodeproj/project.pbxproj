@@ -13,6 +13,10 @@
 		0B0237DD251465E10094C275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0237DC251465E10094C275 /* Assets.xcassets */; };
 		0B0237E0251465E10094C275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0237DE251465E10094C275 /* LaunchScreen.storyboard */; };
 		0B0237F6251465E20094C275 /* TransformersBattleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0237F5251465E20094C275 /* TransformersBattleUITests.swift */; };
+		0B27E74F2518E6DA001F1FCB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B27E74E2518E6DA001F1FCB /* API.swift */; };
+		0B27E763251910DA001F1FCB /* API+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B27E762251910DA001F1FCB /* API+Requests.swift */; };
+		0B27E769251917C3001F1FCB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B27E768251917C3001F1FCB /* Response.swift */; };
+		0B27E773251920A6001F1FCB /* PropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B27E772251920A6001F1FCB /* PropertyWrappers.swift */; };
 		0B3EFCCC2516BEC000ED622D /* TransformerCreationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81937C2516BAC800982E18 /* TransformerCreationTests.swift */; };
 		0B3EFD042516C1B100ED622D /* TransformerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5093342516913600C5B9D3 /* TransformerViewModel.swift */; };
 		0B3EFD092516C1BB00ED622D /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50932B2516900600C5B9D3 /* Transformer.swift */; };
@@ -24,6 +28,9 @@
 		0B6AF361251700D9001A9A5E /* WarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AF360251700D9001A9A5E /* WarViewModel.swift */; };
 		0B6AF367251705D2001A9A5E /* WarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AF366251705D2001A9A5E /* WarTests.swift */; };
 		0B6AF36C25170631001A9A5E /* WarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AF360251700D9001A9A5E /* WarViewModel.swift */; };
+		0B6D252225184B210011D037 /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D252125184B210011D037 /* DataCoordinator.swift */; };
+		0B6D252925184C870011D037 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D252725184C870011D037 /* Model.xcdatamodeld */; };
+		0B6D2533251857AA0011D037 /* ViewModel+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D2532251857AA0011D037 /* ViewModel+Cache.swift */; };
 		0B72730A25166891003B0E42 /* Edition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B72730925166891003B0E42 /* Edition.storyboard */; };
 		0B72730F2516698F003B0E42 /* EditTransformerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */; };
 		0BC9BB7B2517081A00C4A529 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9BB7A2517081A00C4A529 /* String+.swift */; };
@@ -73,6 +80,10 @@
 		0B0237F1251465E20094C275 /* TransformersBattleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformersBattleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0237F5251465E20094C275 /* TransformersBattleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersBattleUITests.swift; sourceTree = "<group>"; };
 		0B0237F7251465E20094C275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B27E74E2518E6DA001F1FCB /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		0B27E762251910DA001F1FCB /* API+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Requests.swift"; sourceTree = "<group>"; };
+		0B27E768251917C3001F1FCB /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		0B27E772251920A6001F1FCB /* PropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrappers.swift; sourceTree = "<group>"; };
 		0B3EFCBA2516BEAB00ED622D /* TransformersBattleLogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformersBattleLogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3EFCBE2516BEAB00ED622D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B3EFD192516C5B200ED622D /* TransformersBattleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersBattleTests.swift; sourceTree = "<group>"; };
@@ -81,6 +92,9 @@
 		0B6AF3552516DA12001A9A5E /* SpecViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecViewModel.swift; sourceTree = "<group>"; };
 		0B6AF360251700D9001A9A5E /* WarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarViewModel.swift; sourceTree = "<group>"; };
 		0B6AF366251705D2001A9A5E /* WarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarTests.swift; sourceTree = "<group>"; };
+		0B6D252125184B210011D037 /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
+		0B6D252825184C870011D037 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		0B6D2532251857AA0011D037 /* ViewModel+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel+Cache.swift"; sourceTree = "<group>"; };
 		0B72730925166891003B0E42 /* Edition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Edition.storyboard; sourceTree = "<group>"; };
 		0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransformerViewController.swift; sourceTree = "<group>"; };
 		0B81937C2516BAC800982E18 /* TransformerCreationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerCreationTests.swift; sourceTree = "<group>"; };
@@ -163,6 +177,7 @@
 				0B0237D3251465DC0094C275 /* AppDelegate.swift */,
 				0B0237D7251465DC0094C275 /* ViewController.swift */,
 				0B0237D9251465DD0094C275 /* Main.storyboard */,
+				0B27E74D2518E667001F1FCB /* API */,
 				0B50932A25168FF500C5B9D3 /* model */,
 				0B5093332516910700C5B9D3 /* view model */,
 				0B7273082516685A003B0E42 /* edition */,
@@ -192,6 +207,16 @@
 			path = TransformersBattleUITests;
 			sourceTree = "<group>";
 		};
+		0B27E74D2518E667001F1FCB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0B27E74E2518E6DA001F1FCB /* API.swift */,
+				0B27E768251917C3001F1FCB /* Response.swift */,
+				0B27E762251910DA001F1FCB /* API+Requests.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		0B3EFCBB2516BEAB00ED622D /* TransformersBattleLogicTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				0B50932B2516900600C5B9D3 /* Transformer.swift */,
+				0B6D252725184C870011D037 /* Model.xcdatamodeld */,
+				0B6D252125184B210011D037 /* DataCoordinator.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -218,6 +245,7 @@
 				0B6AF3552516DA12001A9A5E /* SpecViewModel.swift */,
 				0B6AF360251700D9001A9A5E /* WarViewModel.swift */,
 				0BC9BB8525178E9300C4A529 /* BattleViewModel.swift */,
+				0B6D2532251857AA0011D037 /* ViewModel+Cache.swift */,
 			);
 			path = "view model";
 			sourceTree = "<group>";
@@ -235,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				0BC9BB7A2517081A00C4A529 /* String+.swift */,
+				0B27E772251920A6001F1FCB /* PropertyWrappers.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -531,14 +560,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B6D252225184B210011D037 /* DataCoordinator.swift in Sources */,
 				0B5093352516913600C5B9D3 /* TransformerViewModel.swift in Sources */,
+				0B6D2533251857AA0011D037 /* ViewModel+Cache.swift in Sources */,
 				0B6AF361251700D9001A9A5E /* WarViewModel.swift in Sources */,
+				0B27E769251917C3001F1FCB /* Response.swift in Sources */,
+				0B27E763251910DA001F1FCB /* API+Requests.swift in Sources */,
 				0BC9BB8625178E9300C4A529 /* BattleViewModel.swift in Sources */,
 				0BC9BB7B2517081A00C4A529 /* String+.swift in Sources */,
 				0B72730F2516698F003B0E42 /* EditTransformerViewController.swift in Sources */,
 				0B0237D8251465DC0094C275 /* ViewController.swift in Sources */,
+				0B27E773251920A6001F1FCB /* PropertyWrappers.swift in Sources */,
+				0B27E74F2518E6DA001F1FCB /* API.swift in Sources */,
 				0B6AF3562516DA12001A9A5E /* SpecViewModel.swift in Sources */,
 				0B0237D4251465DC0094C275 /* AppDelegate.swift in Sources */,
+				0B6D252925184C870011D037 /* Model.xcdatamodeld in Sources */,
 				0B50932C2516900600C5B9D3 /* Transformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -943,6 +979,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0B6D252725184C870011D037 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0B6D252825184C870011D037 /* Model.xcdatamodel */,
+			);
+			currentVersion = 0B6D252825184C870011D037 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0B0237C8251465DC0094C275 /* Project object */;
 }

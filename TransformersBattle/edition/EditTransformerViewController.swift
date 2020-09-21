@@ -13,8 +13,19 @@ class EditTransformerViewController: UIViewController {
 
    @IBOutlet var symbolTopOffset: NSLayoutConstraint!
 
+   // empty by default
+   var model = TransformerViewModel()
+
    override func viewDidLoad() {
       super.viewDidLoad()
+
+      // DEMO CODE
+      model.name = "DEMO BOT"
+      model.team = .autobot
+      TransformerSpec.allCases.forEach { model[$0] = 4 }
+      model.save { error in
+         print(#function, "error?", error)
+      }
    }
 
    override func viewWillLayoutSubviews() {

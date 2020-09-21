@@ -10,6 +10,14 @@ import UIKit
 class ViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
-      // Do any additional setup after loading the view.
+
+      // DEMO CODE
+      DataCoordinator.fetch { (result: [CachedTransformer]) in
+         print(result)
+      }
+      API().getTransformers { response in
+         print("raw", response.string)
+         print("decoded", try? response.decode(as: Transformer.List.self))
+      }
    }
 }

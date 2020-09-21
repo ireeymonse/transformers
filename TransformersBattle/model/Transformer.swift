@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Transformer {
+struct Transformer: Codable {
+   /// Assigned after storing in the server.
+   var id: String?
    var team: Team
    var name: String
 
@@ -24,9 +26,13 @@ struct Transformer {
       strength + intelligence + speed + endurance + firepower
    }
 
-   enum Team: String {
+   enum Team: String, Codable {
       case autobot = "A"
       case decepticon = "D"
+   }
+
+   struct List: Decodable {
+      let transformers: [Transformer]
    }
 }
 
