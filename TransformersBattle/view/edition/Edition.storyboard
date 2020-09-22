@@ -27,6 +27,7 @@
                                     <segment title="Autobot"/>
                                     <segment title="Decepticon"/>
                                 </segments>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <connections>
                                     <action selector="teamSwitchChanged:" destination="qrh-MI-cIF" eventType="valueChanged" id="bpN-zk-ygr"/>
                                 </connections>

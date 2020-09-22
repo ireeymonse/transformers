@@ -14,7 +14,7 @@ class WarOutcomeViewController: UIViewController {
    @IBOutlet var survivorsLabel: UILabel!
    @IBOutlet var symbolImageView: UIImageView!
 
-   var model: WarViewModel = WarViewModel(between: [])
+   var model = WarViewModel(between: [])
 
    convenience init(model: WarViewModel) {
       self.init()
@@ -37,7 +37,7 @@ class WarOutcomeViewController: UIViewController {
       symbolImageView.image = model.winningTeamSymbol
    }
 
-   @IBAction func dismissButtonHit(_ sender: Any) {
+   @IBAction func dismissButtonHit(_: Any) {
       dismiss(animated: true)
    }
 }
