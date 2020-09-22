@@ -17,9 +17,13 @@ class TransformerListViewModel {
       let groups = Dictionary(grouping: warriors, by: { $0.team })
       sections = groups.keys.sorted()
       items = sections.map { team in
-         groups[team]?.sorted { $0.rank > $1.rank }.map { TransformerViewModel($0) } ?? []
+         groups[team]!.sorted { $0.rank > $1.rank }.map { TransformerViewModel($0) }
       }
       warModel = WarViewModel(between: warriors)
+   }
+
+   func sectionTitle(for section: Int) -> String {
+      "\(sections[section].name)s"
    }
 
    subscript(_ indexPath: IndexPath) -> TransformerViewModel {

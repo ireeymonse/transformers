@@ -25,9 +25,19 @@ class TransformerListViewController: UIViewController {
       }
 
       title = model.title
+      reload(fromNetwork: true)
+   }
 
-      showActivityIndicator()
-      DataCoordinator.fetchTransformerList { [weak self] list in
+   override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      reload()
+   }
+
+   func reload(fromNetwork: Bool = false) {
+      if fromNetwork {
+         showActivityIndicator()
+      }
+      DataCoordinator.fetchTransformerList(cacheOnly: !fromNetwork) { [weak self] list in
          guard let self = self else { return }
          hideActivityIndicator()
          list.map {
@@ -36,12 +46,21 @@ class TransformerListViewController: UIViewController {
       }
    }
 
-   override func viewWillAppear(_ animated: Bool) {
-      super.viewWillAppear(animated)
-      // returns immediately
-      DataCoordinator.fetchTransformerList(cacheOnly: true) { list in
-         list.map {
-            self.model = TransformerListViewModel($0)
+   func attemptDeleting(item: TransformerViewModel) {
+      confirm(item.deleteConfirmationMessage, title: item.deleteConfirmationTitle,
+              action: ("Delete", .destructive)) { confirmed in
+         guard confirmed else {
+            return
+         }
+         showActivityIndicator()
+         item.delete { [weak self] error in
+            guard let self = self else { return }
+            hideActivityIndicator()
+            if error != nil {
+               self.alert(item.deleteErrorMessage, title: item.deleteErrorTitle)
+            } else {
+               self.reload()
+            }
          }
       }
    }
@@ -66,7 +85,7 @@ extension TransformerListViewController: UITableViewDataSource, UITableViewDeleg
    }
 
    func tableView(_: UITableView, titleForHeaderInSection section: Int) -> String? {
-      model.sections[section].name
+      model.sectionTitle(for: section)
    }
 
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -77,5 +96,11 @@ extension TransformerListViewController: UITableViewDataSource, UITableViewDeleg
 
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       tableView.deselectRow(at: indexPath, animated: true)
+   }
+
+   func tableView(_: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+      if editingStyle == .delete {
+         attemptDeleting(item: model[indexPath])
+      }
    }
 }

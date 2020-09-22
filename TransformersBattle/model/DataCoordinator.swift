@@ -34,7 +34,7 @@ private extension DataCoordinator {
    }
 
    static func fetch<T: NSManagedObject>(predicate: NSPredicate? = nil) throws -> [T] {
-      let request = NSFetchRequest<T>(entityName: String(describing: T.self))
+      let request = T.request
       request.predicate = predicate
       request.returnsObjectsAsFaults = false
       return try viewContext.fetch(request)
@@ -42,6 +42,12 @@ private extension DataCoordinator {
 
    static func performBackgroundTask(_ task: @escaping (NSManagedObjectContext) -> Void) {
       shared.container.performBackgroundTask(task)
+   }
+}
+
+extension NSObjectProtocol where Self: NSManagedObject {
+   static var request: NSFetchRequest<Self> {
+      NSFetchRequest<Self>(entityName: String(describing: self))
    }
 }
 
@@ -65,11 +71,40 @@ extension DataCoordinator {
          do {
             let result: Transformer.List = try response.decode()
             update(result.transformers)
-            // TODO: update cache, purge deleted
+            purge(with: result.transformers)
          } catch {
             update(nil)
          }
       }
+   }
+
+   // FIXME: use ids to improve the algorithm
+   private static func purge(with remotes: [Transformer]) {
+      // destroy everything
+      let request = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: CachedTransformer.self))
+      let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
+      do {
+         try shared.container.persistentStoreCoordinator.execute(deleteRequest, with: viewContext)
+      } catch {}
+      // create anew
+
+      for remote in remotes {
+         // find or create
+         let local = CachedTransformer(context: viewContext)
+         local.id = remote.id
+         local.name = remote.name
+         local.team = remote.team.rawValue
+         local.strength = Int16(remote.strength)
+         local.intelligence = Int16(remote.intelligence)
+         local.speed = Int16(remote.speed)
+         local.endurance = Int16(remote.endurance)
+         local.rank = Int16(remote.rank)
+         local.courage = Int16(remote.courage)
+         local.firepower = Int16(remote.firepower)
+         local.skill = Int16(remote.skill)
+      }
+      // probably not even necessary
+      try? viewContext.save()
    }
 
    static func fetchTransformer(id: String?) -> CachedTransformer? {

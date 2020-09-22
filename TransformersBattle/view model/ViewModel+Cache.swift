@@ -36,4 +36,11 @@ extension TransformerViewModel {
       }
       DataCoordinator.save(updated, completion: completion)
    }
+
+   func delete(_ completion: @escaping (Error?) -> Void) {
+      guard let id = id else {
+         return completion(APIError.noData)
+      }
+      DataCoordinator.deleteTransformer(id: id, completion: completion)
+   }
 }

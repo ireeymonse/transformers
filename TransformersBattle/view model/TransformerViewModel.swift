@@ -87,8 +87,8 @@ class TransformerViewModel {
    var relevantSpecsList: [SpecViewModel] {
       let sorted = specsList.sorted { $0.value > $1.value }
       let relevant = sorted.filter { $0.value > 5 }
-      // the top 3 above 5pts, or whatever is the top one if really lame
-      return Array(relevant.isEmpty ? sorted.prefix(1) : relevant.prefix(3))
+      // the top 3 above 5pts, or just the rank if really lame
+      return relevant.isEmpty ? [specs[.rank]!] : Array(relevant.prefix(3))
    }
 
    var isValid: Bool {
@@ -99,6 +99,11 @@ class TransformerViewModel {
    var saveErrorMessage: String {
       "\(isNew ? "Your new Transformer" : "'\(name)'") could not be saved. Try again."
    }
+
+   var deleteConfirmationTitle: String { "Delete '\(name)'" }
+   let deleteConfirmationMessage = "Are you sure?"
+   let deleteErrorTitle = "Error"
+   var deleteErrorMessage: String { "Could not delete '\(name)'. Try again." }
 }
 
 extension Transformer.Team {
