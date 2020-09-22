@@ -9,6 +9,7 @@ import UIKit
 
 class TransformerListViewController: UIViewController {
    @IBOutlet var tableView: UITableView!
+   @IBOutlet var nuclearButton: UIButton!
 
    var model = TransformerListViewModel([]) {
       didSet { tableView.reloadData() }
@@ -25,6 +26,7 @@ class TransformerListViewController: UIViewController {
       }
 
       title = model.title
+      nuclearButton.setTitle(model.warActionTitle, for: .normal)
       reload(fromNetwork: true)
    }
 
@@ -62,6 +64,15 @@ class TransformerListViewController: UIViewController {
                self.reload()
             }
          }
+      }
+   }
+
+   @IBAction func nuclearButtonHit(_ sender: Any) {
+      if model.items.isEmpty {
+         performSegue(withIdentifier: "new transformer", sender: nil)
+      } else {
+         let war = WarOutcomeViewController(model: model.warModel)
+         present(war, animated: true)
       }
    }
 

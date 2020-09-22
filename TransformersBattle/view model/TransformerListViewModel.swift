@@ -12,6 +12,7 @@ class TransformerListViewModel {
    let sections: [Transformer.Team]
    let items: [[TransformerViewModel]]
    let warModel: WarViewModel
+   let warActionTitle = "Wage War!"
 
    init(_ warriors: [Transformer]) {
       let groups = Dictionary(grouping: warriors, by: { $0.team })
