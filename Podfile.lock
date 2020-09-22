@@ -1,20 +1,28 @@
 PODS:
+  - Nimble (8.1.2)
+  - Quick (3.0.0)
   - SwiftFormat/CLI (0.46.2)
   - SwiftLint (0.40.2)
 
 DEPENDENCIES:
+  - Nimble
+  - Quick
   - SwiftFormat/CLI
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - Nimble
+    - Quick
     - SwiftFormat
     - SwiftLint
 
 SPEC CHECKSUMS:
+  Nimble: 3864815b4703c7ebffba875973c70e854489fbae
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   SwiftFormat: 46baf677c105265a99b488b51cd062e23eb2fc14
   SwiftLint: 1216c910d27c2633ade33b4f071bb6b930982e62
 
-PODFILE CHECKSUM: 29bf12b6b98c35e48f026990992c70eb54353b59
+PODFILE CHECKSUM: 5f2526c1fc3cc87f8e301ff55922fb94a02d0884
 
 COCOAPODS: 1.9.3
