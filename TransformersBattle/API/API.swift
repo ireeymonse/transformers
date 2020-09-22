@@ -50,7 +50,9 @@ class API {
       request.httpBody = body
 
       session.dataTask(with: request) { data, response, error in
-         completion(.init(data, response, error))
+         DispatchQueue.main.async {
+            completion(.init(data, response, error))
+         }
       }.resume()
    }
 }

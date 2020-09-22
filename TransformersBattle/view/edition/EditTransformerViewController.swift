@@ -37,6 +37,7 @@ class EditTransformerViewController: UIViewController {
       teamSwitch.selectedSegmentIndex = model.team == .autobot ? 0 : 1
       symbolImageView.image = model.teamSymbol
       backgroundImageView.image = model.teamEditionBackground
+      nameTextField.text = model.name
       specs = model.specsList
       tableView.reloadData()
       saveButton.isEnabled = model.isValid

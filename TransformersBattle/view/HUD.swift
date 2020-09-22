@@ -41,4 +41,17 @@ extension UIViewController {
       alert.addAction(UIAlertAction(title: "OK", style: .cancel))
       present(alert, animated: true)
    }
+
+   func confirm(_ message: String?, title: String? = nil,
+                action: (title: String, style: UIAlertAction.Style) = ("OK", .default),
+                confirmation: @escaping (Bool) -> Void) {
+      let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: action.title, style: action.style) { _ in
+         confirmation(true)
+      })
+      alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { _ in
+         confirmation(false)
+      })
+      present(alert, animated: true)
+   }
 }

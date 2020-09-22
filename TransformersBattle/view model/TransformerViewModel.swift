@@ -15,6 +15,7 @@ class TransformerViewModel {
    var name: String {
       didSet { name = name.trimmed }
    }
+
    var specs: [TransformerSpec: SpecViewModel]
 
    /// Instance for a new transformer, initialized with default values
@@ -51,7 +52,7 @@ class TransformerViewModel {
    var isNew: Bool { id == nil }
 
    var title: String {
-      "\(id == nil ? "New" : "Edit") Transformer"
+      "\(isNew ? "Create" : "Edit") Transformer"
    }
 
    var teamName: String { team.name }
@@ -82,14 +83,27 @@ class TransformerViewModel {
       TransformerSpec.allCases.compactMap { specs[$0] }
    }
 
+   /// The top specs, hopefully greater than 5
+   var relevantSpecsList: [SpecViewModel] {
+      let sorted = specsList.sorted { $0.value > $1.value }
+      let relevant = sorted.filter { $0.value > 5 }
+      // the top 3 above 5pts, or just the rank if really lame
+      return relevant.isEmpty ? [specs[.rank]!] : Array(relevant.prefix(3))
+   }
+
    var isValid: Bool {
       !name.isEmpty && specs.allSatisfy { _, spec in spec.isValid }
    }
 
    let saveErrorTitle = "Error"
    var saveErrorMessage: String {
-      "\(isNew ? "Your new Transformer": "'\(name)'") could not be saved. Try again."
+      "\(isNew ? "Your new Transformer" : "'\(name)'") could not be saved. Try again."
    }
+
+   var deleteConfirmationTitle: String { "Delete '\(name)'" }
+   let deleteConfirmationMessage = "Are you sure?"
+   let deleteErrorTitle = "Error"
+   var deleteErrorMessage: String { "Could not delete '\(name)'. Try again." }
 }
 
 extension Transformer.Team {
