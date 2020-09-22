@@ -33,6 +33,10 @@
 		0B6D2533251857AA0011D037 /* ViewModel+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D2532251857AA0011D037 /* ViewModel+Cache.swift */; };
 		0B72730A25166891003B0E42 /* Edition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B72730925166891003B0E42 /* Edition.storyboard */; };
 		0B72730F2516698F003B0E42 /* EditTransformerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */; };
+		0B7ACC0D251997B600A7BE75 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7ACC0C251997B600A7BE75 /* UITextField+.swift */; };
+		0BA2C1EB251974AF003CEECD /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2C1EA251974AF003CEECD /* UIView+.swift */; };
+		0BA2C1F525198677003CEECD /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2C1F425198677003CEECD /* UITableView+.swift */; };
+		0BA2C1FB25198730003CEECD /* EditSpecRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2C1FA25198730003CEECD /* EditSpecRow.swift */; };
 		0BC9BB7B2517081A00C4A529 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9BB7A2517081A00C4A529 /* String+.swift */; };
 		0BC9BB802517085500C4A529 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9BB7A2517081A00C4A529 /* String+.swift */; };
 		0BC9BB8625178E9300C4A529 /* BattleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9BB8525178E9300C4A529 /* BattleViewModel.swift */; };
@@ -97,7 +101,11 @@
 		0B6D2532251857AA0011D037 /* ViewModel+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel+Cache.swift"; sourceTree = "<group>"; };
 		0B72730925166891003B0E42 /* Edition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Edition.storyboard; sourceTree = "<group>"; };
 		0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransformerViewController.swift; sourceTree = "<group>"; };
+		0B7ACC0C251997B600A7BE75 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		0B81937C2516BAC800982E18 /* TransformerCreationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerCreationTests.swift; sourceTree = "<group>"; };
+		0BA2C1EA251974AF003CEECD /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		0BA2C1F425198677003CEECD /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		0BA2C1FA25198730003CEECD /* EditSpecRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSpecRow.swift; sourceTree = "<group>"; };
 		0BC9BB7A2517081A00C4A529 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		0BC9BB8525178E9300C4A529 /* BattleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleViewModel.swift; sourceTree = "<group>"; };
 		0BC9BB8B25178FA200C4A529 /* BattleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleTests.swift; sourceTree = "<group>"; };
@@ -181,6 +189,7 @@
 				0B50932A25168FF500C5B9D3 /* model */,
 				0B5093332516910700C5B9D3 /* view model */,
 				0B7273082516685A003B0E42 /* edition */,
+				0BA2C1E925197499003CEECD /* view */,
 				0B0237DC251465E10094C275 /* Assets.xcassets */,
 				0B0237DE251465E10094C275 /* LaunchScreen.storyboard */,
 				0BC9BB792517080900C4A529 /* utils */,
@@ -257,6 +266,17 @@
 				0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */,
 			);
 			path = edition;
+			sourceTree = "<group>";
+		};
+		0BA2C1E925197499003CEECD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0BA2C1EA251974AF003CEECD /* UIView+.swift */,
+				0BA2C1F425198677003CEECD /* UITableView+.swift */,
+				0B7ACC0C251997B600A7BE75 /* UITextField+.swift */,
+				0BA2C1FA25198730003CEECD /* EditSpecRow.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		0BC9BB792517080900C4A529 /* utils */ = {
@@ -563,16 +583,20 @@
 				0B6D252225184B210011D037 /* DataCoordinator.swift in Sources */,
 				0B5093352516913600C5B9D3 /* TransformerViewModel.swift in Sources */,
 				0B6D2533251857AA0011D037 /* ViewModel+Cache.swift in Sources */,
+				0BA2C1F525198677003CEECD /* UITableView+.swift in Sources */,
 				0B6AF361251700D9001A9A5E /* WarViewModel.swift in Sources */,
 				0B27E769251917C3001F1FCB /* Response.swift in Sources */,
 				0B27E763251910DA001F1FCB /* API+Requests.swift in Sources */,
 				0BC9BB8625178E9300C4A529 /* BattleViewModel.swift in Sources */,
 				0BC9BB7B2517081A00C4A529 /* String+.swift in Sources */,
 				0B72730F2516698F003B0E42 /* EditTransformerViewController.swift in Sources */,
+				0BA2C1EB251974AF003CEECD /* UIView+.swift in Sources */,
+				0B7ACC0D251997B600A7BE75 /* UITextField+.swift in Sources */,
 				0B0237D8251465DC0094C275 /* ViewController.swift in Sources */,
 				0B27E773251920A6001F1FCB /* PropertyWrappers.swift in Sources */,
 				0B27E74F2518E6DA001F1FCB /* API.swift in Sources */,
 				0B6AF3562516DA12001A9A5E /* SpecViewModel.swift in Sources */,
+				0BA2C1FB25198730003CEECD /* EditSpecRow.swift in Sources */,
 				0B0237D4251465DC0094C275 /* AppDelegate.swift in Sources */,
 				0B6D252925184C870011D037 /* Model.xcdatamodeld in Sources */,
 				0B50932C2516900600C5B9D3 /* Transformer.swift in Sources */,

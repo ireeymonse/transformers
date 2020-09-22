@@ -5,9 +5,12 @@
 //  Created by Iree García on 19/09/20.
 //
 
-import Foundation
+import UIKit
 
 class TransformerViewModel {
+   static let defaultSpecValue: Float = 5
+
+   let id: String?
    var team: Transformer.Team
    var name: String {
       didSet { name = name.trimmed }
@@ -17,15 +20,17 @@ class TransformerViewModel {
 
    /// Instance for a new transformer, initialized with default values
    init() {
+      id = nil
       team = .autobot
       name = ""
       specs = TransformerSpec.allCases.reduce(into: [:]) { acc, spec in
-         acc[spec] = SpecViewModel(spec: spec, value: 0)
+         acc[spec] = SpecViewModel(spec: spec, value: Self.defaultSpecValue)
       }
    }
 
    /// Instance for an existing transformer
    init(_ transformer: Transformer) {
+      id = transformer.id
       team = transformer.team
       name = transformer.name
       specs = TransformerSpec.allCases.reduce(into: [:]) { acc, spec in
@@ -40,11 +45,28 @@ class TransformerViewModel {
          case .firepower: value = transformer.firepower
          case .skill: value = transformer.skill
          }
-         acc[spec] = SpecViewModel(spec: spec, value: value)
+         acc[spec] = SpecViewModel(spec: spec, value: Float(value))
       }
    }
 
+   var title: String {
+      "\(id == nil ? "New" : "Edit") Transformer"
+   }
+
    var teamName: String { team.name }
+   var teamSymbol: UIImage? {
+      switch team {
+      case .autobot: return UIImage(named: "autobot")
+      case .decepticon: return UIImage(named: "decepticon")
+      }
+   }
+
+   var teamEditionBackground: UIImage? {
+      switch team {
+      case .autobot: return UIImage(named: "blueprint")
+      case .decepticon: return UIImage(named: "blueprint gray")
+      }
+   }
 
    subscript(spec: TransformerSpec) -> Float {
       get {

@@ -30,8 +30,8 @@ class TransformerCreationTests: QuickSpec {
             it("should have a value for each spec") {
                expect(sut.specsList.count).to(equal(TransformerSpec.allCases.count))
             }
-            it("should have all specs set to 0") {
-               expect(sut.specsList).to(allPass { $0?.value == 0 })
+            it("should have all specs set to 5") {
+               expect(sut.specsList).to(allPass { $0?.value == 5 })
             }
             it("should not be valid") {
                expect(sut.isValid).to(beFalse())

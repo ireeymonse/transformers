@@ -13,9 +13,13 @@ class SpecViewModel {
       didSet { value = floor(value) }
    }
 
-   init(spec: TransformerSpec, value: Int) {
+   init(spec: TransformerSpec, value: Float) {
       label = spec.rawValue.capitalized
-      self.value = Float(value)
+      self.value = value
+   }
+
+   var valueText: String {
+      String(format: "%.0f", value)
    }
 
    var isValid: Bool {

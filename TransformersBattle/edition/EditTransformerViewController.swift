@@ -10,22 +10,19 @@ import UIKit
 class EditTransformerViewController: UIViewController {
    @IBOutlet var backgroundImageView: UIImageView!
    @IBOutlet var symbolImageView: UIImageView!
-
+   @IBOutlet var teamSwitch: UISegmentedControl!
+   @IBOutlet var nameTextField: UITextField!
+   @IBOutlet var tableView: UITableView!
+   @IBOutlet var saveButton: UIButton!
    @IBOutlet var symbolTopOffset: NSLayoutConstraint!
 
    // empty by default
    var model = TransformerViewModel()
+   private var specs = [SpecViewModel]()
 
    override func viewDidLoad() {
       super.viewDidLoad()
-
-      // DEMO CODE
-      model.name = "DEMO BOT"
-      model.team = .autobot
-      TransformerSpec.allCases.forEach { model[$0] = 4 }
-      model.save { error in
-         print(#function, "error?", error)
-      }
+      reload()
    }
 
    override func viewWillLayoutSubviews() {
@@ -33,7 +30,48 @@ class EditTransformerViewController: UIViewController {
       symbolTopOffset.constant = navigationController?.navigationBar.frame.height ?? 0
    }
 
-   @IBAction func switchSide(_: UISegmentedControl) {
-      // TODO:
+   /// Present the model onscreen
+   func reload() { // TODO: animated?
+      title = model.title
+      navigationItem.title = model.title
+      teamSwitch.selectedSegmentIndex = model.team == .autobot ? 0 : 1
+      symbolImageView.image = model.teamSymbol
+      backgroundImageView.image = model.teamEditionBackground
+      specs = model.specsList
+      tableView.reloadData()
+      saveButton.isEnabled = model.isValid
+   }
+
+   @IBAction func teamSwitchChanged(_ control: UISegmentedControl) {
+      model.team = control.selectedSegmentIndex == 0 ?
+         .autobot : .decepticon
+      reload()
+   }
+
+   @IBAction func saveButtonHit(_: UIButton) {
+      model.save { error in
+         print(#function, "error?", error)
+      }
+   }
+}
+
+extension EditTransformerViewController: UITableViewDataSource, UITableViewDelegate {
+   func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+      specs.count
+   }
+
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      let cell: EditSpecRow = tableView.dequeueCell(at: indexPath)
+      cell.model = specs[indexPath.row]
+      return cell
+   }
+}
+
+extension EditTransformerViewController: UITextFieldDelegate {
+   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+      model.name = textField.textReplacing(string, in: range)
+      // reload button here, since only name affects validity
+      saveButton.isEnabled = model.isValid
+      return true
    }
 }
