@@ -13,7 +13,6 @@ protocol TransformersAPIProtocol {
    func getTransformers(_ completion: @escaping (Response) -> Void)
    /// If the transformer doesn't have an id, a new instance will be created on the server
    func saveTransformer(_ transformer: Transformer, completion: @escaping (Response) -> Void)
-   /// If the transformer doesn't have an id, a new instance will be created on the server
    func removeTransformer(id: String, completion: @escaping (Response) -> Void)
 }
 

@@ -17,6 +17,15 @@ class Response {
       self.response = response
       self.error = error
    }
+
+   var statusCode: Int {
+      (response as? HTTPURLResponse)?.statusCode ?? 999
+   }
+
+   /// `statusCode` is 2xx
+   var isSuccessful: Bool {
+      error == nil && 200 ... 299 ~= statusCode
+   }
 }
 
 // MARK: - Decoding

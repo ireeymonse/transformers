@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0B0237D4251465DC0094C275 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0237D3251465DC0094C275 /* AppDelegate.swift */; };
-		0B0237D8251465DC0094C275 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0237D7251465DC0094C275 /* ViewController.swift */; };
 		0B0237DB251465DD0094C275 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0237D9251465DD0094C275 /* Main.storyboard */; };
 		0B0237DD251465E10094C275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0237DC251465E10094C275 /* Assets.xcassets */; };
 		0B0237E0251465E10094C275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0237DE251465E10094C275 /* LaunchScreen.storyboard */; };
@@ -43,6 +42,9 @@
 		0BC9BB8625178E9300C4A529 /* BattleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9BB8525178E9300C4A529 /* BattleViewModel.swift */; };
 		0BC9BB8C25178FA200C4A529 /* BattleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9BB8B25178FA200C4A529 /* BattleTests.swift */; };
 		0BC9BB9125178FCB00C4A529 /* BattleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9BB8525178E9300C4A529 /* BattleViewModel.swift */; };
+		0BD05D4D2519BDCD00E5EFD2 /* TransformerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD05D4C2519BDCD00E5EFD2 /* TransformerListViewController.swift */; };
+		0BD05D572519BF3800E5EFD2 /* TransformerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD05D562519BF3800E5EFD2 /* TransformerListViewModel.swift */; };
+		0BD05D612519CF7A00E5EFD2 /* TransformerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD05D602519CF7A00E5EFD2 /* TransformerRow.swift */; };
 		44A141F7590F8F462E3D9629 /* Pods_TransformersBattleLogicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310D03516E4F418CA298D06B /* Pods_TransformersBattleLogicTests.framework */; };
 		82593A588555865FF5E38D94 /* Pods_TransformersBattle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D03898E9DE487AF8671BF2 /* Pods_TransformersBattle.framework */; };
 		A5E6EEA2250DD39D48DC6443 /* Pods_TransformersBattleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B638A1548B8BAE8515F0E /* Pods_TransformersBattleTests.framework */; };
@@ -75,7 +77,6 @@
 /* Begin PBXFileReference section */
 		0B0237D0251465DC0094C275 /* TransformersBattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransformersBattle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0237D3251465DC0094C275 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B0237D7251465DC0094C275 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B0237DA251465DD0094C275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B0237DC251465E10094C275 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B0237DF251465E10094C275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,6 +112,9 @@
 		0BC9BB7A2517081A00C4A529 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		0BC9BB8525178E9300C4A529 /* BattleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleViewModel.swift; sourceTree = "<group>"; };
 		0BC9BB8B25178FA200C4A529 /* BattleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleTests.swift; sourceTree = "<group>"; };
+		0BD05D4C2519BDCD00E5EFD2 /* TransformerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerListViewController.swift; sourceTree = "<group>"; };
+		0BD05D562519BF3800E5EFD2 /* TransformerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerListViewModel.swift; sourceTree = "<group>"; };
+		0BD05D602519CF7A00E5EFD2 /* TransformerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerRow.swift; sourceTree = "<group>"; };
 		310D03516E4F418CA298D06B /* Pods_TransformersBattleLogicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransformersBattleLogicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4CBB64F49852CA5714F4E2 /* Pods-TransformersBattleLogicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattleLogicTests.release.xcconfig"; path = "Target Support Files/Pods-TransformersBattleLogicTests/Pods-TransformersBattleLogicTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C3B638A1548B8BAE8515F0E /* Pods_TransformersBattleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransformersBattleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,13 +189,10 @@
 			isa = PBXGroup;
 			children = (
 				0B0237D3251465DC0094C275 /* AppDelegate.swift */,
-				0B0237D7251465DC0094C275 /* ViewController.swift */,
-				0B0237D9251465DD0094C275 /* Main.storyboard */,
 				0B27E74D2518E667001F1FCB /* API */,
 				0B50932A25168FF500C5B9D3 /* model */,
-				0B5093332516910700C5B9D3 /* view model */,
-				0B2B47102519B16700DF73AA /* controller */,
 				0BA2C1E925197499003CEECD /* view */,
+				0B5093332516910700C5B9D3 /* view model */,
 				0B0237DC251465E10094C275 /* Assets.xcassets */,
 				0B0237DE251465E10094C275 /* LaunchScreen.storyboard */,
 				0BC9BB792517080900C4A529 /* utils */,
@@ -228,15 +229,6 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		0B2B47102519B16700DF73AA /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				0B7273082516685A003B0E42 /* edition */,
-				0B2B47112519B19200DF73AA /* HUD.swift */,
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
 		0B3EFCBB2516BEAB00ED622D /* TransformersBattleLogicTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +253,7 @@
 		0B5093332516910700C5B9D3 /* view model */ = {
 			isa = PBXGroup;
 			children = (
+				0BD05D562519BF3800E5EFD2 /* TransformerListViewModel.swift */,
 				0B5093342516913600C5B9D3 /* TransformerViewModel.swift */,
 				0B6AF3552516DA12001A9A5E /* SpecViewModel.swift */,
 				0B6AF360251700D9001A9A5E /* WarViewModel.swift */,
@@ -275,6 +268,7 @@
 			children = (
 				0B72730925166891003B0E42 /* Edition.storyboard */,
 				0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */,
+				0BA2C1FA25198730003CEECD /* EditSpecRow.swift */,
 			);
 			path = edition;
 			sourceTree = "<group>";
@@ -282,10 +276,13 @@
 		0BA2C1E925197499003CEECD /* view */ = {
 			isa = PBXGroup;
 			children = (
+				0B0237D9251465DD0094C275 /* Main.storyboard */,
+				0BD05D4B2519BD9B00E5EFD2 /* list */,
+				0B7273082516685A003B0E42 /* edition */,
 				0BA2C1EA251974AF003CEECD /* UIView+.swift */,
 				0BA2C1F425198677003CEECD /* UITableView+.swift */,
 				0B7ACC0C251997B600A7BE75 /* UITextField+.swift */,
-				0BA2C1FA25198730003CEECD /* EditSpecRow.swift */,
+				0B2B47112519B19200DF73AA /* HUD.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -297,6 +294,15 @@
 				0B27E772251920A6001F1FCB /* PropertyWrappers.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		0BD05D4B2519BD9B00E5EFD2 /* list */ = {
+			isa = PBXGroup;
+			children = (
+				0BD05D4C2519BDCD00E5EFD2 /* TransformerListViewController.swift */,
+				0BD05D602519CF7A00E5EFD2 /* TransformerRow.swift */,
+			);
+			path = list;
 			sourceTree = "<group>";
 		};
 		36BF3DDDDB098B97904633C8 /* Pods */ = {
@@ -600,17 +606,19 @@
 				0B27E763251910DA001F1FCB /* API+Requests.swift in Sources */,
 				0B2B47122519B19200DF73AA /* HUD.swift in Sources */,
 				0BC9BB8625178E9300C4A529 /* BattleViewModel.swift in Sources */,
+				0BD05D572519BF3800E5EFD2 /* TransformerListViewModel.swift in Sources */,
 				0BC9BB7B2517081A00C4A529 /* String+.swift in Sources */,
 				0B72730F2516698F003B0E42 /* EditTransformerViewController.swift in Sources */,
 				0BA2C1EB251974AF003CEECD /* UIView+.swift in Sources */,
 				0B7ACC0D251997B600A7BE75 /* UITextField+.swift in Sources */,
-				0B0237D8251465DC0094C275 /* ViewController.swift in Sources */,
 				0B27E773251920A6001F1FCB /* PropertyWrappers.swift in Sources */,
 				0B27E74F2518E6DA001F1FCB /* API.swift in Sources */,
 				0B6AF3562516DA12001A9A5E /* SpecViewModel.swift in Sources */,
+				0BD05D612519CF7A00E5EFD2 /* TransformerRow.swift in Sources */,
 				0BA2C1FB25198730003CEECD /* EditSpecRow.swift in Sources */,
 				0B0237D4251465DC0094C275 /* AppDelegate.swift in Sources */,
 				0B6D252925184C870011D037 /* Model.xcdatamodeld in Sources */,
+				0BD05D4D2519BDCD00E5EFD2 /* TransformerListViewController.swift in Sources */,
 				0B50932C2516900600C5B9D3 /* Transformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
