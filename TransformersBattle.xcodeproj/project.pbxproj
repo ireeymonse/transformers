@@ -17,6 +17,7 @@
 		0B27E763251910DA001F1FCB /* API+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B27E762251910DA001F1FCB /* API+Requests.swift */; };
 		0B27E769251917C3001F1FCB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B27E768251917C3001F1FCB /* Response.swift */; };
 		0B27E773251920A6001F1FCB /* PropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B27E772251920A6001F1FCB /* PropertyWrappers.swift */; };
+		0B2B47122519B19200DF73AA /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B47112519B19200DF73AA /* HUD.swift */; };
 		0B3EFCCC2516BEC000ED622D /* TransformerCreationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81937C2516BAC800982E18 /* TransformerCreationTests.swift */; };
 		0B3EFD042516C1B100ED622D /* TransformerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5093342516913600C5B9D3 /* TransformerViewModel.swift */; };
 		0B3EFD092516C1BB00ED622D /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50932B2516900600C5B9D3 /* Transformer.swift */; };
@@ -88,6 +89,7 @@
 		0B27E762251910DA001F1FCB /* API+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Requests.swift"; sourceTree = "<group>"; };
 		0B27E768251917C3001F1FCB /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		0B27E772251920A6001F1FCB /* PropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrappers.swift; sourceTree = "<group>"; };
+		0B2B47112519B19200DF73AA /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		0B3EFCBA2516BEAB00ED622D /* TransformersBattleLogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformersBattleLogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3EFCBE2516BEAB00ED622D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B3EFD192516C5B200ED622D /* TransformersBattleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersBattleTests.swift; sourceTree = "<group>"; };
@@ -188,7 +190,7 @@
 				0B27E74D2518E667001F1FCB /* API */,
 				0B50932A25168FF500C5B9D3 /* model */,
 				0B5093332516910700C5B9D3 /* view model */,
-				0B7273082516685A003B0E42 /* edition */,
+				0B2B47102519B16700DF73AA /* controller */,
 				0BA2C1E925197499003CEECD /* view */,
 				0B0237DC251465E10094C275 /* Assets.xcassets */,
 				0B0237DE251465E10094C275 /* LaunchScreen.storyboard */,
@@ -224,6 +226,15 @@
 				0B27E762251910DA001F1FCB /* API+Requests.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		0B2B47102519B16700DF73AA /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				0B7273082516685A003B0E42 /* edition */,
+				0B2B47112519B19200DF73AA /* HUD.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 		0B3EFCBB2516BEAB00ED622D /* TransformersBattleLogicTests */ = {
@@ -587,6 +598,7 @@
 				0B6AF361251700D9001A9A5E /* WarViewModel.swift in Sources */,
 				0B27E769251917C3001F1FCB /* Response.swift in Sources */,
 				0B27E763251910DA001F1FCB /* API+Requests.swift in Sources */,
+				0B2B47122519B19200DF73AA /* HUD.swift in Sources */,
 				0BC9BB8625178E9300C4A529 /* BattleViewModel.swift in Sources */,
 				0BC9BB7B2517081A00C4A529 /* String+.swift in Sources */,
 				0B72730F2516698F003B0E42 /* EditTransformerViewController.swift in Sources */,

@@ -15,7 +15,6 @@ class TransformerViewModel {
    var name: String {
       didSet { name = name.trimmed }
    }
-
    var specs: [TransformerSpec: SpecViewModel]
 
    /// Instance for a new transformer, initialized with default values
@@ -48,6 +47,8 @@ class TransformerViewModel {
          acc[spec] = SpecViewModel(spec: spec, value: Float(value))
       }
    }
+
+   var isNew: Bool { id == nil }
 
    var title: String {
       "\(id == nil ? "New" : "Edit") Transformer"
@@ -83,6 +84,11 @@ class TransformerViewModel {
 
    var isValid: Bool {
       !name.isEmpty && specs.allSatisfy { _, spec in spec.isValid }
+   }
+
+   let saveErrorTitle = "Error"
+   var saveErrorMessage: String {
+      "\(isNew ? "Your new Transformer": "'\(name)'") could not be saved. Try again."
    }
 }
 

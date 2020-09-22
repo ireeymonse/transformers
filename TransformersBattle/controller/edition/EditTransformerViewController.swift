@@ -49,8 +49,15 @@ class EditTransformerViewController: UIViewController {
    }
 
    @IBAction func saveButtonHit(_: UIButton) {
-      model.save { error in
-         print(#function, "error?", error)
+      showActivityIndicator()
+      model.save { [weak self] error in
+         guard let self = self else { return }
+         hideActivityIndicator()
+         if error != nil {
+            self.alert(self.model.saveErrorMessage, title: self.model.saveErrorTitle)
+         } else {
+            self.navigationController?.popViewController(animated: true)
+         }
       }
    }
 }

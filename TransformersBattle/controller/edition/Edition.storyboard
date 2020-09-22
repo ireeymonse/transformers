@@ -46,6 +46,9 @@
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="qrh-MI-cIF" id="LG0-4c-XRm"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.056000001729999999" green="0.09799999744" blue="0.14599999790000001" alpha="0.23299999539999999" colorSpace="custom" customColorSpace="sRGB"/>
@@ -134,8 +137,9 @@
                                                 <constraint firstItem="IkR-iG-gra" firstAttribute="centerY" secondItem="iHH-mc-U1G" secondAttribute="centerY" id="5eq-7E-kMA"/>
                                                 <constraint firstItem="Huj-MF-2vg" firstAttribute="leading" secondItem="x6s-hb-e9G" secondAttribute="trailing" constant="8" id="9TE-xE-Sxk"/>
                                                 <constraint firstItem="Huj-MF-2vg" firstAttribute="centerY" secondItem="UAb-DE-Q55" secondAttribute="centerY" id="Q5b-RD-tvJ"/>
-                                                <constraint firstAttribute="centerX" secondItem="Huj-MF-2vg" secondAttribute="trailing" constant="20" id="RPN-pW-Egr"/>
+                                                <constraint firstAttribute="centerX" secondItem="Huj-MF-2vg" secondAttribute="trailing" priority="999" constant="40" id="RPN-pW-Egr"/>
                                                 <constraint firstAttribute="trailing" secondItem="IkR-iG-gra" secondAttribute="trailing" constant="10" id="XWC-9Y-oY9"/>
+                                                <constraint firstItem="Huj-MF-2vg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UAb-DE-Q55" secondAttribute="leading" constant="120" id="Xh1-YK-44P"/>
                                                 <constraint firstItem="Huj-MF-2vg" firstAttribute="top" secondItem="UAb-DE-Q55" secondAttribute="top" constant="15" id="ZSD-N9-nyC"/>
                                                 <constraint firstItem="Pia-Nl-a5X" firstAttribute="firstBaseline" secondItem="iHH-mc-U1G" secondAttribute="firstBaseline" id="oQi-eJ-Ifj"/>
                                                 <constraint firstItem="IkR-iG-gra" firstAttribute="leading" secondItem="Huj-MF-2vg" secondAttribute="trailing" constant="12" id="rIK-Wa-Ctg"/>

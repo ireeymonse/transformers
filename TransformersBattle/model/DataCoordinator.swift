@@ -60,7 +60,6 @@ extension DataCoordinator {
 
    static func save(_ modified: Transformer, completion: @escaping (Error?) -> Void) {
       shared.api.saveTransformer(modified) { response in
-         print(response.response)
          // get updated transformer from response
          let updated: Transformer
          do {

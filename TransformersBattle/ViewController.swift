@@ -10,14 +10,15 @@ import UIKit
 class ViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
+   }
 
+   override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
       // DEMO CODE
-      DataCoordinator.fetch { (result: [CachedTransformer]) in
-         print(result)
-      }
+      showActivityIndicator()
       API().getTransformers { response in
+         hideActivityIndicator()
          print("raw", response.string)
-         print("decoded", try? response.decode(as: Transformer.List.self))
       }
    }
 }
