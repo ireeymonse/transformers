@@ -56,13 +56,7 @@ class TransformerViewModel {
    }
 
    var teamName: String { team.name }
-   var teamSymbol: UIImage? {
-      switch team {
-      case .autobot: return UIImage(named: "autobot")
-      case .decepticon: return UIImage(named: "decepticon")
-      }
-   }
-
+   var teamSymbol: UIImage? { team.symbol }
    var teamEditionBackground: UIImage? {
       switch team {
       case .autobot: return UIImage(named: "blueprint")
@@ -118,6 +112,13 @@ extension Transformer.Team {
       switch self {
       case .autobot: return .decepticon
       case .decepticon: return .autobot
+      }
+   }
+
+   var symbol: UIImage? {
+      switch self {
+      case .autobot: return UIImage(named: "autobot")
+      case .decepticon: return UIImage(named: "decepticon")
       }
    }
 }

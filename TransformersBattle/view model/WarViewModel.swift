@@ -5,13 +5,15 @@
 //  Created by Iree García on 19/09/20.
 //
 
-import Foundation
+import UIKit
 
 class WarViewModel {
    let battles: [BattleOutcome]
    let battleCountText: String
    let outcomeText: String
    let survivorsText: String
+   let winningTeamSymbol: UIImage?
+   let backgroundColor: UIColor
 
    init(between warriors: [Transformer]) {
       switch WarOutcome.for(warriors) {
@@ -27,16 +29,22 @@ class WarViewModel {
             list = rivalSurvivors.joined(separator: ", ")
             survivorsText = "Survivors from the losing team (\(winningTeam.rival.name)s): \(list)"
          }
+         winningTeamSymbol = winningTeam.symbol
+         backgroundColor = .white
 
       case let .tie(battles):
          self.battles = battles
-         outcomeText = "Tie!"
+         outcomeText = "It's a Tie!"
          survivorsText = ""
+         winningTeamSymbol = nil
+         backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
 
       case .mayhem:
          battles = []
          outcomeText = "Mayhem!"
          survivorsText = "No survivors."
+         winningTeamSymbol = nil
+         backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
       }
 
       battleCountText = battles.isEmpty ? "" :

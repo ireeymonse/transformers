@@ -9,6 +9,7 @@ import UIKit
 
 class TransformerListViewController: UIViewController {
    @IBOutlet var tableView: UITableView!
+   @IBOutlet var nuclearButton: UIButton!
 
    var model = TransformerListViewModel([]) {
       didSet { tableView.reloadData() }
@@ -16,15 +17,21 @@ class TransformerListViewController: UIViewController {
 
    override func viewDidLoad() {
       super.viewDidLoad()
-      if #available(iOS 13.0, *),
-         let bar = navigationController?.navigationBar {
-         let appearance = bar.standardAppearance
-         appearance.configureWithTransparentBackground()
-         bar.standardAppearance = appearance
-         bar.scrollEdgeAppearance = appearance
+      if let bar = navigationController?.navigationBar {
+         if #available(iOS 13.0, *) {
+            let appearance = bar.standardAppearance
+            appearance.configureWithTransparentBackground()
+            bar.standardAppearance = appearance
+            bar.scrollEdgeAppearance = appearance
+         } else {
+            bar.backgroundColor = .clear
+            bar.shadowImage = UIImage()
+            bar.setBackgroundImage(UIImage(), for: .default)
+         }
       }
 
       title = model.title
+      nuclearButton.setTitle(model.warActionTitle, for: .normal)
       reload(fromNetwork: true)
    }
 
@@ -62,6 +69,15 @@ class TransformerListViewController: UIViewController {
                self.reload()
             }
          }
+      }
+   }
+
+   @IBAction func nuclearButtonHit(_: Any) {
+      if model.items.isEmpty {
+         performSegue(withIdentifier: "new transformer", sender: nil)
+      } else {
+         let war = WarOutcomeViewController(model: model.warModel)
+         present(war, animated: true)
       }
    }
 

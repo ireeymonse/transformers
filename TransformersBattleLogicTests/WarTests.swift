@@ -63,7 +63,7 @@ class WarTests: QuickSpec {
                expect(sut.battleCountText).to(beEmpty())
             }
             it("should be declared a tie") {
-               expect(sut.outcomeText) == "Tie!"
+               expect(sut.outcomeText) == "It's a Tie!"
             }
             it("should not show survivors") {
                expect(sut.survivorsText).to(beEmpty())

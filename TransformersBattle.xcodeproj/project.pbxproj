@@ -21,6 +21,8 @@
 		0B3EFD042516C1B100ED622D /* TransformerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5093342516913600C5B9D3 /* TransformerViewModel.swift */; };
 		0B3EFD092516C1BB00ED622D /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50932B2516900600C5B9D3 /* Transformer.swift */; };
 		0B3EFD1A2516C5B200ED622D /* TransformersBattleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3EFD192516C5B200ED622D /* TransformersBattleTests.swift */; };
+		0B47680C251A7CF9000D0B9E /* WarOutcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B47680A251A7CF9000D0B9E /* WarOutcomeViewController.swift */; };
+		0B47680D251A7CF9000D0B9E /* WarOutcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B47680B251A7CF9000D0B9E /* WarOutcomeViewController.xib */; };
 		0B50932C2516900600C5B9D3 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50932B2516900600C5B9D3 /* Transformer.swift */; };
 		0B5093352516913600C5B9D3 /* TransformerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5093342516913600C5B9D3 /* TransformerViewModel.swift */; };
 		0B6AF3562516DA12001A9A5E /* SpecViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AF3552516DA12001A9A5E /* SpecViewModel.swift */; };
@@ -94,6 +96,8 @@
 		0B3EFCBA2516BEAB00ED622D /* TransformersBattleLogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformersBattleLogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3EFCBE2516BEAB00ED622D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B3EFD192516C5B200ED622D /* TransformersBattleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersBattleTests.swift; sourceTree = "<group>"; };
+		0B47680A251A7CF9000D0B9E /* WarOutcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarOutcomeViewController.swift; sourceTree = "<group>"; };
+		0B47680B251A7CF9000D0B9E /* WarOutcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarOutcomeViewController.xib; sourceTree = "<group>"; };
 		0B50932B2516900600C5B9D3 /* Transformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
 		0B5093342516913600C5B9D3 /* TransformerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerViewModel.swift; sourceTree = "<group>"; };
 		0B6AF3552516DA12001A9A5E /* SpecViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecViewModel.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 		0B72730E2516698F003B0E42 /* EditTransformerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransformerViewController.swift; sourceTree = "<group>"; };
 		0B7ACC0C251997B600A7BE75 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		0B81937C2516BAC800982E18 /* TransformerCreationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerCreationTests.swift; sourceTree = "<group>"; };
+		0B82906E251A94AB0038E14E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0BA2C1EA251974AF003CEECD /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		0BA2C1F425198677003CEECD /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		0BA2C1FA25198730003CEECD /* EditSpecRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSpecRow.swift; sourceTree = "<group>"; };
@@ -164,6 +169,7 @@
 		0B0237C7251465DC0094C275 = {
 			isa = PBXGroup;
 			children = (
+				0B82906E251A94AB0038E14E /* README.md */,
 				0B0237D2251465DC0094C275 /* TransformersBattle */,
 				0B0237E9251465E20094C275 /* TransformersBattleTests */,
 				0B3EFCBB2516BEAB00ED622D /* TransformersBattleLogicTests */,
@@ -240,6 +246,15 @@
 			path = TransformersBattleLogicTests;
 			sourceTree = "<group>";
 		};
+		0B4767FB251A7C3C000D0B9E /* war */ = {
+			isa = PBXGroup;
+			children = (
+				0B47680A251A7CF9000D0B9E /* WarOutcomeViewController.swift */,
+				0B47680B251A7CF9000D0B9E /* WarOutcomeViewController.xib */,
+			);
+			path = war;
+			sourceTree = "<group>";
+		};
 		0B50932A25168FF500C5B9D3 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +294,7 @@
 				0B0237D9251465DD0094C275 /* Main.storyboard */,
 				0BD05D4B2519BD9B00E5EFD2 /* list */,
 				0B7273082516685A003B0E42 /* edition */,
+				0B4767FB251A7C3C000D0B9E /* war */,
 				0BA2C1EA251974AF003CEECD /* UIView+.swift */,
 				0BA2C1F425198677003CEECD /* UITableView+.swift */,
 				0B7ACC0C251997B600A7BE75 /* UITextField+.swift */,
@@ -460,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B0237E0251465E10094C275 /* LaunchScreen.storyboard in Resources */,
+				0B47680D251A7CF9000D0B9E /* WarOutcomeViewController.xib in Resources */,
 				0B72730A25166891003B0E42 /* Edition.storyboard in Resources */,
 				0B0237DD251465E10094C275 /* Assets.xcassets in Resources */,
 				0B0237DB251465DD0094C275 /* Main.storyboard in Resources */,
@@ -619,6 +636,7 @@
 				0B0237D4251465DC0094C275 /* AppDelegate.swift in Sources */,
 				0B6D252925184C870011D037 /* Model.xcdatamodeld in Sources */,
 				0BD05D4D2519BDCD00E5EFD2 /* TransformerListViewController.swift in Sources */,
+				0B47680C251A7CF9000D0B9E /* WarOutcomeViewController.swift in Sources */,
 				0B50932C2516900600C5B9D3 /* Transformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -858,7 +876,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TransformersBattleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -882,7 +900,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TransformersBattleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -942,7 +960,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TransformersBattleLogicTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -961,7 +979,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TransformersBattleLogicTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
