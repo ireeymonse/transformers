@@ -4,11 +4,12 @@
 
 ### Build and start
 
-To build an run the project, you'll need `CocoaPods` installed and a recent version of Xcode. After cloning the repo, run
-  ```bash
-  $ pod install
-  ```
-After that, open  `TransformersBattle.xcworkspace` and run the project.
+To build an run the project, you'll need `CocoaPods` installed and a recent version of Xcode. 
+- After cloning the repo, run
+     ```bash
+     $ pod install
+     ```
+- Open  `TransformersBattle.xcworkspace` and run the project.
 
 ##### Compatibility issues
 
@@ -20,8 +21,8 @@ The code is compatible with iOS 10.0, but a device is required to run the app (i
 ### Development
 
 To enable linting and formatting in your workspace, use
-```
-git config core.hooksPath githooks
+```bash
+$ git config core.hooksPath githooks
 ```
 
 ### Assumptions
