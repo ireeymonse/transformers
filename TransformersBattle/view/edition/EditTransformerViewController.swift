@@ -26,12 +26,12 @@ class EditTransformerViewController: UIViewController {
       teamSwitch.setTitleTextAttributes([
          .font: switchFont,
          .foregroundColor: UIColor.white
-         ], for: .normal)
+      ], for: .normal)
       teamSwitch.setTitleTextAttributes([
          .font: switchFont,
          .foregroundColor: UIColor.black
-         ], for: .selected)
-      
+      ], for: .selected)
+
       reload()
    }
 
@@ -39,7 +39,7 @@ class EditTransformerViewController: UIViewController {
       super.viewWillLayoutSubviews()
       symbolTopOffset.constant = navigationController?.navigationBar.frame.height ?? 0
    }
-   
+
    // dismiss keyboard on touch
    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
       super.touchesBegan(touches, with: event)

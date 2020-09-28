@@ -8,6 +8,4 @@
 @testable import TransformersBattle
 import XCTest
 
-class TransformersBattleTests: XCTestCase {
-
-}
+class TransformersBattleTests: XCTestCase {}

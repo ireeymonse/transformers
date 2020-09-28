@@ -19,11 +19,11 @@ enum HTTPMethod: String {
 }
 
 class API {
-    static var authToken: String? {
-        // FIXME: use keychain. Implemented like this for speed
-        get { return UserDefaults.standard.string(forKey: "api.auth.token") }
-        set { UserDefaults.standard.set(newValue, forKey: "api.auth.token") }
-    }
+   static var authToken: String? {
+      // FIXME: use keychain. Implemented like this for speed
+      get { return UserDefaults.standard.string(forKey: "api.auth.token") }
+      set { UserDefaults.standard.set(newValue, forKey: "api.auth.token") }
+   }
 
    let session: URLSession = {
       let config = URLSessionConfiguration.default

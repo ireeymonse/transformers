@@ -97,6 +97,7 @@ class TransformerViewModel {
    var deleteConfirmationTitle: String {
       return "Delete '\(name)'"
    }
+
    let deleteConfirmationMessage = "Are you sure?"
    let deleteErrorTitle = "Error"
    var deleteErrorMessage: String {

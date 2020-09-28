@@ -7,6 +7,4 @@
 
 import XCTest
 
-class TransformersBattleUITests: XCTestCase {
-
-}
+class TransformersBattleUITests: XCTestCase {}
