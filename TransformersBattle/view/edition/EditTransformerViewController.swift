@@ -22,12 +22,28 @@ class EditTransformerViewController: UIViewController {
 
    override func viewDidLoad() {
       super.viewDidLoad()
+      let switchFont = UIFont.systemFont(ofSize: 14, weight: .semibold)
+      teamSwitch.setTitleTextAttributes([
+         .font: switchFont,
+         .foregroundColor: UIColor.white
+         ], for: .normal)
+      teamSwitch.setTitleTextAttributes([
+         .font: switchFont,
+         .foregroundColor: UIColor.black
+         ], for: .selected)
+      
       reload()
    }
 
    override func viewWillLayoutSubviews() {
       super.viewWillLayoutSubviews()
       symbolTopOffset.constant = navigationController?.navigationBar.frame.height ?? 0
+   }
+   
+   // dismiss keyboard on touch
+   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+      super.touchesBegan(touches, with: event)
+      view.endEditing(true)
    }
 
    /// Present the model onscreen
@@ -65,7 +81,7 @@ class EditTransformerViewController: UIViewController {
 
 extension EditTransformerViewController: UITableViewDataSource, UITableViewDelegate {
    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-      specs.count
+      return specs.count
    }
 
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

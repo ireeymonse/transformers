@@ -24,16 +24,16 @@ class TransformerListViewModel {
    }
 
    func sectionTitle(for section: Int) -> String {
-      "\(sections[section].name)s"
+      return "\(sections[section].name)s"
    }
 
    subscript(_ indexPath: IndexPath) -> TransformerViewModel {
-      items[indexPath.section][indexPath.row]
+      return items[indexPath.section][indexPath.row]
    }
 }
 
 extension Transformer.Team: Comparable {
    static func < (lhs: Transformer.Team, rhs: Transformer.Team) -> Bool {
-      lhs == .decepticon && rhs == .autobot
+      return lhs == .decepticon && rhs == .autobot
    }
 }

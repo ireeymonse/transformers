@@ -22,8 +22,8 @@ class BattleTests: QuickSpec {
             }
 
             it("should be a victory") {
-               guard case .victory = sut else {
-                  return fail("expected .victory, got \(sut!)")
+               guard sut != nil, case .victory = sut! else {
+                  return fail("expected .victory, got \(sut.debugDescription)")
                }
             }
             it("should find the winner") {
@@ -129,8 +129,8 @@ class BattleTests: QuickSpec {
                )
             }
             it("should be a mayhem") {
-               guard case .mayhem = sut else {
-                  return fail("expected .tie, got \(sut!)")
+               guard sut != nil, case .mayhem = sut! else {
+                  return fail("expected .tie, got \(sut.debugDescription)")
                }
             }
          }
@@ -143,8 +143,8 @@ class BattleTests: QuickSpec {
                )
             }
             it("should be a mayhem") {
-               guard case .mayhem = sut else {
-                  return fail("expected .tie, got \(sut!)")
+               guard sut != nil, case .mayhem = sut! else {
+                  return fail("expected .tie, got \(sut.debugDescription)")
                }
             }
          }

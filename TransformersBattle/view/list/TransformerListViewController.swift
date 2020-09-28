@@ -18,16 +18,9 @@ class TransformerListViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
       if let bar = navigationController?.navigationBar {
-         if #available(iOS 13.0, *) {
-            let appearance = bar.standardAppearance
-            appearance.configureWithTransparentBackground()
-            bar.standardAppearance = appearance
-            bar.scrollEdgeAppearance = appearance
-         } else {
-            bar.backgroundColor = .clear
-            bar.shadowImage = UIImage()
-            bar.setBackgroundImage(UIImage(), for: .default)
-         }
+         bar.backgroundColor = .clear
+         bar.shadowImage = UIImage()
+         bar.setBackgroundImage(UIImage(), for: .default)
       }
 
       title = model.title
@@ -93,15 +86,15 @@ class TransformerListViewController: UIViewController {
 
 extension TransformerListViewController: UITableViewDataSource, UITableViewDelegate {
    func numberOfSections(in _: UITableView) -> Int {
-      model.sections.count
+      return model.sections.count
    }
 
    func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
-      model.items[section].count
+      return model.items[section].count
    }
 
    func tableView(_: UITableView, titleForHeaderInSection section: Int) -> String? {
-      model.sectionTitle(for: section)
+      return model.sectionTitle(for: section)
    }
 
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

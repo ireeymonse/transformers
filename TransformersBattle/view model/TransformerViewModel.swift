@@ -24,7 +24,7 @@ class TransformerViewModel {
       team = .autobot
       name = ""
       specs = TransformerSpec.allCases.reduce(into: [:]) { acc, spec in
-         acc[spec] = SpecViewModel(spec: spec, value: Self.defaultSpecValue)
+         acc[spec] = SpecViewModel(spec: spec, value: TransformerViewModel.defaultSpecValue)
       }
    }
 
@@ -49,14 +49,14 @@ class TransformerViewModel {
       }
    }
 
-   var isNew: Bool { id == nil }
+   var isNew: Bool { return id == nil }
 
    var title: String {
-      "\(isNew ? "Create" : "Edit") Transformer"
+      return "\(isNew ? "Create" : "Edit") Transformer"
    }
 
-   var teamName: String { team.name }
-   var teamSymbol: UIImage? { team.symbol }
+   var teamName: String { return team.name }
+   var teamSymbol: UIImage? { return team.symbol }
    var teamEditionBackground: UIImage? {
       switch team {
       case .autobot: return UIImage(named: "blueprint")
@@ -66,7 +66,7 @@ class TransformerViewModel {
 
    subscript(spec: TransformerSpec) -> Float {
       get {
-         specs[spec]?.value ?? 0
+         return specs[spec]?.value ?? 0
       }
       set {
          specs[spec]?.value = newValue
@@ -74,7 +74,7 @@ class TransformerViewModel {
    }
 
    var specsList: [SpecViewModel] {
-      TransformerSpec.allCases.compactMap { specs[$0] }
+      return TransformerSpec.allCases.compactMap { specs[$0] }
    }
 
    /// The top specs, hopefully greater than 5
@@ -86,18 +86,22 @@ class TransformerViewModel {
    }
 
    var isValid: Bool {
-      !name.isEmpty && specs.allSatisfy { _, spec in spec.isValid }
+      return !name.isEmpty && specs.allSatisfy { _, spec in spec.isValid }
    }
 
    let saveErrorTitle = "Error"
    var saveErrorMessage: String {
-      "\(isNew ? "Your new Transformer" : "'\(name)'") could not be saved. Try again."
+      return "\(isNew ? "Your new Transformer" : "'\(name)'") could not be saved. Try again."
    }
 
-   var deleteConfirmationTitle: String { "Delete '\(name)'" }
+   var deleteConfirmationTitle: String {
+      return "Delete '\(name)'"
+   }
    let deleteConfirmationMessage = "Are you sure?"
    let deleteErrorTitle = "Error"
-   var deleteErrorMessage: String { "Could not delete '\(name)'. Try again." }
+   var deleteErrorMessage: String {
+      return "Could not delete '\(name)'. Try again."
+   }
 }
 
 extension Transformer.Team {
@@ -108,7 +112,7 @@ extension Transformer.Team {
       }
    }
 
-   var rival: Self {
+   var rival: Transformer.Team {
       switch self {
       case .autobot: return .decepticon
       case .decepticon: return .autobot

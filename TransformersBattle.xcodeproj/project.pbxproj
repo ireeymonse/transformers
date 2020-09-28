@@ -15,7 +15,6 @@
 		0B27E74F2518E6DA001F1FCB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B27E74E2518E6DA001F1FCB /* API.swift */; };
 		0B27E763251910DA001F1FCB /* API+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B27E762251910DA001F1FCB /* API+Requests.swift */; };
 		0B27E769251917C3001F1FCB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B27E768251917C3001F1FCB /* Response.swift */; };
-		0B27E773251920A6001F1FCB /* PropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B27E772251920A6001F1FCB /* PropertyWrappers.swift */; };
 		0B2B47122519B19200DF73AA /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B47112519B19200DF73AA /* HUD.swift */; };
 		0B3EFCCC2516BEC000ED622D /* TransformerCreationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81937C2516BAC800982E18 /* TransformerCreationTests.swift */; };
 		0B3EFD042516C1B100ED622D /* TransformerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5093342516913600C5B9D3 /* TransformerViewModel.swift */; };
@@ -47,6 +46,8 @@
 		0BD05D4D2519BDCD00E5EFD2 /* TransformerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD05D4C2519BDCD00E5EFD2 /* TransformerListViewController.swift */; };
 		0BD05D572519BF3800E5EFD2 /* TransformerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD05D562519BF3800E5EFD2 /* TransformerListViewModel.swift */; };
 		0BD05D612519CF7A00E5EFD2 /* TransformerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD05D602519CF7A00E5EFD2 /* TransformerRow.swift */; };
+		3F70D09B25221CA000FEF3A7 /* CachedTransformer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F70D09925221CA000FEF3A7 /* CachedTransformer+CoreDataClass.swift */; };
+		3F70D09C25221CA000FEF3A7 /* CachedTransformer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F70D09A25221CA000FEF3A7 /* CachedTransformer+CoreDataProperties.swift */; };
 		44A141F7590F8F462E3D9629 /* Pods_TransformersBattleLogicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310D03516E4F418CA298D06B /* Pods_TransformersBattleLogicTests.framework */; };
 		82593A588555865FF5E38D94 /* Pods_TransformersBattle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D03898E9DE487AF8671BF2 /* Pods_TransformersBattle.framework */; };
 		A5E6EEA2250DD39D48DC6443 /* Pods_TransformersBattleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B638A1548B8BAE8515F0E /* Pods_TransformersBattleTests.framework */; };
@@ -91,7 +92,6 @@
 		0B27E74E2518E6DA001F1FCB /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		0B27E762251910DA001F1FCB /* API+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Requests.swift"; sourceTree = "<group>"; };
 		0B27E768251917C3001F1FCB /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		0B27E772251920A6001F1FCB /* PropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrappers.swift; sourceTree = "<group>"; };
 		0B2B47112519B19200DF73AA /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		0B3EFCBA2516BEAB00ED622D /* TransformersBattleLogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformersBattleLogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3EFCBE2516BEAB00ED622D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +123,8 @@
 		310D03516E4F418CA298D06B /* Pods_TransformersBattleLogicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransformersBattleLogicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4CBB64F49852CA5714F4E2 /* Pods-TransformersBattleLogicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattleLogicTests.release.xcconfig"; path = "Target Support Files/Pods-TransformersBattleLogicTests/Pods-TransformersBattleLogicTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C3B638A1548B8BAE8515F0E /* Pods_TransformersBattleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransformersBattleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F70D09925221CA000FEF3A7 /* CachedTransformer+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CachedTransformer+CoreDataClass.swift"; path = "emplate/CachedTransformer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3F70D09A25221CA000FEF3A7 /* CachedTransformer+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CachedTransformer+CoreDataProperties.swift"; path = "emplate/CachedTransformer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		556B4AC9534A6A47EB1A3852 /* Pods-TransformersBattle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattle.release.xcconfig"; path = "Target Support Files/Pods-TransformersBattle/Pods-TransformersBattle.release.xcconfig"; sourceTree = "<group>"; };
 		9BEFED50F32F52EF2800D6EF /* Pods-TransformersBattleLogicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattleLogicTests.debug.xcconfig"; path = "Target Support Files/Pods-TransformersBattleLogicTests/Pods-TransformersBattleLogicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B3E96CF9BCD5107BC8134A89 /* Pods-TransformersBattleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformersBattleTests.release.xcconfig"; path = "Target Support Files/Pods-TransformersBattleTests/Pods-TransformersBattleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -261,6 +263,8 @@
 				0B50932B2516900600C5B9D3 /* Transformer.swift */,
 				0B6D252725184C870011D037 /* Model.xcdatamodeld */,
 				0B6D252125184B210011D037 /* DataCoordinator.swift */,
+				3F70D09925221CA000FEF3A7 /* CachedTransformer+CoreDataClass.swift */,
+				3F70D09A25221CA000FEF3A7 /* CachedTransformer+CoreDataProperties.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -307,7 +311,6 @@
 			isa = PBXGroup;
 			children = (
 				0BC9BB7A2517081A00C4A529 /* String+.swift */,
-				0B27E772251920A6001F1FCB /* PropertyWrappers.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -619,16 +622,17 @@
 				0B6D2533251857AA0011D037 /* ViewModel+Cache.swift in Sources */,
 				0BA2C1F525198677003CEECD /* UITableView+.swift in Sources */,
 				0B6AF361251700D9001A9A5E /* WarViewModel.swift in Sources */,
+				3F70D09C25221CA000FEF3A7 /* CachedTransformer+CoreDataProperties.swift in Sources */,
 				0B27E769251917C3001F1FCB /* Response.swift in Sources */,
 				0B27E763251910DA001F1FCB /* API+Requests.swift in Sources */,
 				0B2B47122519B19200DF73AA /* HUD.swift in Sources */,
 				0BC9BB8625178E9300C4A529 /* BattleViewModel.swift in Sources */,
 				0BD05D572519BF3800E5EFD2 /* TransformerListViewModel.swift in Sources */,
+				3F70D09B25221CA000FEF3A7 /* CachedTransformer+CoreDataClass.swift in Sources */,
 				0BC9BB7B2517081A00C4A529 /* String+.swift in Sources */,
 				0B72730F2516698F003B0E42 /* EditTransformerViewController.swift in Sources */,
 				0BA2C1EB251974AF003CEECD /* UIView+.swift in Sources */,
 				0B7ACC0D251997B600A7BE75 /* UITextField+.swift in Sources */,
-				0B27E773251920A6001F1FCB /* PropertyWrappers.swift in Sources */,
 				0B27E74F2518E6DA001F1FCB /* API.swift in Sources */,
 				0B6AF3562516DA12001A9A5E /* SpecViewModel.swift in Sources */,
 				0BD05D612519CF7A00E5EFD2 /* TransformerRow.swift in Sources */,

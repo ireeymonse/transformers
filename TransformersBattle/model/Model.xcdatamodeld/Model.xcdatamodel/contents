@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="20A5374i" minimumToolsVersion="Xcode 9.0" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="CachedTransformer" representedClassName="CachedTransformer" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="19F101" minimumToolsVersion="Xcode 9.0" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CachedTransformer" representedClassName="CachedTransformer" syncable="YES">
         <attribute name="courage" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="endurance" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="firepower" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -14,6 +14,6 @@
         <attribute name="team" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CachedTransformer" positionX="-63" positionY="-18" width="128" height="194"/>
+        <element name="CachedTransformer" positionX="-63" positionY="-18" width="128" height="210"/>
     </elements>
 </model>

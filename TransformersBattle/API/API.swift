@@ -19,7 +19,11 @@ enum HTTPMethod: String {
 }
 
 class API {
-   @SecureStorage(key: "api.auth.token") static var authToken: String?
+    static var authToken: String? {
+        // FIXME: use keychain. Implemented like this for speed
+        get { return UserDefaults.standard.string(forKey: "api.auth.token") }
+        set { UserDefaults.standard.set(newValue, forKey: "api.auth.token") }
+    }
 
    let session: URLSession = {
       let config = URLSessionConfiguration.default
@@ -44,7 +48,7 @@ class API {
 
       request.httpMethod = method.rawValue
       request.addValue(mimeType, forHTTPHeaderField: "Content-Type")
-      Self.authToken.map {
+      API.authToken.map {
          request.addValue("Bearer \($0)", forHTTPHeaderField: "Authorization")
       }
       request.httpBody = body

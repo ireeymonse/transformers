@@ -12,7 +12,7 @@ protocol Reusable {
 }
 
 extension UITableViewCell: Reusable {
-   static var reuseID: String { String(describing: self) }
+   static var reuseID: String { return String(describing: self) }
 }
 
 extension UITableView {

@@ -26,27 +26,27 @@ extension API: TransformersAPIProtocol {
    private static var authTaskQueue: [() -> Void]?
 
    func ensureAllSpark() {
-      if Self.authToken != nil || Self.authTaskQueue != nil {
+      if API.authToken != nil || API.authTaskQueue != nil {
          print("AllSpark available")
          return
       }
       print("Fetching AllSpark")
       // TODO: thread safety
-      Self.authTaskQueue = []
+      API.authTaskQueue = []
       request(.allSpark, method: .get) { response in
          response.string.map { allSpark in
-            Self.authToken = allSpark
+            API.authToken = allSpark
             // execute tasks now that allspark is available
-            Self.authTaskQueue?.forEach { task in task() }
+            API.authTaskQueue?.forEach { task in task() }
          }
-         Self.authTaskQueue = nil
+         API.authTaskQueue = nil
       }
    }
 
    // FIXME: this looks a lot like an operation queue
    private func waitForAllSpark(task: @escaping () -> Void) {
-      if Self.authTaskQueue != nil {
-         Self.authTaskQueue?.append(task)
+      if API.authTaskQueue != nil {
+         API.authTaskQueue?.append(task)
       } else {
          task()
       }

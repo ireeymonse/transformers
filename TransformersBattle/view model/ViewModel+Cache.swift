@@ -10,7 +10,7 @@ import Foundation
 extension TransformerViewModel {
    /// Generates a new object with all the changes
    fileprivate var updated: Transformer {
-      Transformer(
+      return Transformer(
          id: id,
          team: team,
          name: name,
@@ -27,7 +27,7 @@ extension TransformerViewModel {
 
    /// Makes a deep copy for edition
    func copy() -> TransformerViewModel {
-      TransformerViewModel(updated)
+      return TransformerViewModel(updated)
    }
 
    func save(_ completion: @escaping (Error?) -> Void) {

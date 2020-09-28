@@ -9,6 +9,6 @@ import Foundation
 
 extension String {
    var trimmed: String {
-      trimmingCharacters(in: .whitespacesAndNewlines)
+      return trimmingCharacters(in: .whitespacesAndNewlines)
    }
 }

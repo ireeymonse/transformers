@@ -27,7 +27,9 @@ final class DataCoordinator {
 // MARK: - Private operations
 
 private extension DataCoordinator {
-   static var viewContext: NSManagedObjectContext { shared.container.viewContext }
+   static var viewContext: NSManagedObjectContext {
+      return shared.container.viewContext
+   }
 
    static func perform(_ task: @escaping (NSManagedObjectContext) -> Void) {
       task(shared.container.viewContext)
@@ -47,7 +49,7 @@ private extension DataCoordinator {
 
 extension NSObjectProtocol where Self: NSManagedObject {
    static var request: NSFetchRequest<Self> {
-      NSFetchRequest<Self>(entityName: String(describing: self))
+      return NSFetchRequest<Self>(entityName: String(describing: self))
    }
 }
 

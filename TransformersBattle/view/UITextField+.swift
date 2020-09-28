@@ -10,6 +10,6 @@ import UIKit
 extension UITextField {
    /// Helper to get text after `textField(_:shouldChangeCharactersIn:replacementString:)`
    func textReplacing(_ string: String, in range: NSRange) -> String {
-      NSString(string: text ?? "").replacingCharacters(in: range, with: string)
+      return NSString(string: text ?? "").replacingCharacters(in: range, with: string)
    }
 }

@@ -93,7 +93,7 @@ enum WarOutcome {
          .compactMap { $0.victor?.name }
 
       let rivals = (winningTeam == .autobot ? decepticons : autobots)
-      let survivors = rivals[battles.count...].map(\.name)
+      let survivors = rivals[battles.count...].map { $0.name }
 
       return .victory(battles: battles, winningTeam: winningTeam,
                       victors: victors, rivalSurvivors: survivors)

@@ -19,11 +19,11 @@ class SpecViewModel {
    }
 
    var valueText: String {
-      String(format: "%.0f", value)
+      return String(format: "%.0f", value)
    }
 
    var isValid: Bool {
-      1 ... 10 ~= value
+      return 1 ... 10 ~= value
    }
 }
 

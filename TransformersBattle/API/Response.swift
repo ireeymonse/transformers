@@ -19,12 +19,12 @@ class Response {
    }
 
    var statusCode: Int {
-      (response as? HTTPURLResponse)?.statusCode ?? 999
+      return (response as? HTTPURLResponse)?.statusCode ?? 999
    }
 
    /// `statusCode` is 2xx
    var isSuccessful: Bool {
-      error == nil && 200 ... 299 ~= statusCode
+      return error == nil && 200 ... 299 ~= statusCode
    }
 }
 
@@ -40,7 +40,7 @@ extension Response {
    func decode<R: Decodable>(as _: R.Type? = nil) throws -> R {
       if let error = error { throw error }
       guard let data = data else { throw APIError.noData }
-      return try Self.decoder.decode(R.self, from: data)
+      return try Response.decoder.decode(R.self, from: data)
    }
 
    /// The UTF8 strning value of `data`.

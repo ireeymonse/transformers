@@ -23,7 +23,7 @@ struct Transformer: Codable {
    var skill: Int
 
    var overallRating: Int {
-      strength + intelligence + speed + endurance + firepower
+      return strength + intelligence + speed + endurance + firepower
    }
 
    enum Team: String, Codable {

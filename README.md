@@ -1,22 +1,32 @@
 ![transformers logo](https://upload.wikimedia.org/wikipedia/commons/e/ed/Logo_of_Transformers.png)
 
-# Transformers Battle
+# Transformers Battle: Legacy version
 
 ### Build and start
 
-To build an run the project, you'll need `CocoaPods` installed and a recent version of Xcode. 
+To build an run the project, you'll need `CocoaPods` installed and **Xcode 10.3**.
 - After cloning the repo, run
      ```bash
      $ pod install
      ```
-- Open  `TransformersBattle.xcworkspace` and run the project.
+- Open `TransformersBattle.xcworkspace` and run the project.
+- Install a legacy iOS simulator runtime. This was tested on iOS 10.3.1 and 12.4.
 
-##### Compatibility issues
+##### Compatibility changelog
 
-The code is compatible with iOS 10.0, but a device is required to run the app (iOS 10 and 11 simulators might not be supported).
+The code was made compatible with Xcode 10.3. Here is a list of changes:
 
-> The project was created using Xcode 12.0 with Swift 5.3. Older versions might present issues.
-
+- Generate explicit core data model classes.
+  > Observation: A bug during the process caused the files to be inside a folder called "emplate".
+- Remove @propertyWrappers. 
+- Changing `Self` to explicit class for static access.
+- Reverting implicit return syntax from newer Swift version. 
+- Removing iOS 13 references.
+- Removed `AccentColor` from XCAssets.
+- Further storyboard changes: remove system color references, remove `insetGrouped` tableView style.
+- Custom styling for segmentedControl.
+- Removing unused tests with new methods.
+- Remove automatic optional `enum` unwrapping from tests.
 
 ### Development
 

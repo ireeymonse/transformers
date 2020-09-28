@@ -77,22 +77,22 @@ let supremeWarriors = ["Optimus Prime", "Predaking"]
 
 /// `a` is a Supreme Warrior
 func supreme(_ a: Transformer, _ b: Transformer) -> BattleOutcome? {
-   _wins(a, b) { supremeWarriors.contains(a.name) }
+   return _wins(a, b) { supremeWarriors.contains(a.name) }
 }
 
 /// `a` is 4+ points braver and 3+ points stronger
 func hero(_ a: Transformer, _ b: Transformer) -> BattleOutcome? {
-   _wins(a, b) {
+   return _wins(a, b) {
       a.courage - b.courage >= 4 && a.strength - b.strength >= 3
    }
 }
 
 /// `a` is 3+ points more skilled
 func expert(_ a: Transformer, _ b: Transformer) -> BattleOutcome? {
-   _wins(a, b) { a.skill - b.skill >= 3 }
+   return _wins(a, b) { a.skill - b.skill >= 3 }
 }
 
 /// Evaluates the overall rating
 func overall(_ a: Transformer, _ b: Transformer) -> BattleOutcome? {
-   _wins(a, b) { a.overallRating > b.overallRating }
+   return _wins(a, b) { a.overallRating > b.overallRating }
 }
