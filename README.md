@@ -12,6 +12,8 @@ To build an run the project, you'll need `CocoaPods` installed and **Xcode 10.3*
 - Open `TransformersBattle.xcworkspace` and run the project.
 - Install a legacy iOS simulator runtime. This was tested on iOS 10.3.1 and 12.4.
 
+> **NOTE:** Xcode 10.3 **does not run on macOS Big Sur.**
+
 ##### Compatibility changelog
 
 The code was made compatible with Xcode 10.3. Here is a list of changes:
